@@ -1,0 +1,30 @@
+{
+  "name": "telzio",
+  "version": "0.0.0",
+  "description": "Node package for Telzio API v3.",
+  "type": "module",
+  "author": "edonv",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-api": "openapi-typescript src/swagger.json -o src/gen/schema.ts",
+    "build": "tsc",
+    "run": "tsc && node dist/index.js"
+  },
+  "private": "true",
+  "dependencies": {
+    "openapi-fetch": "^0.9.3",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "openapi-typescript": "^7.1.1"
+  },
+  "config": {
+    "apiSpecURL": "https://api.telzio.com/swagger/v3/swagger.json"
+  }
+}
