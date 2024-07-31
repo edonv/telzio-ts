@@ -1,0 +1,5 @@
+apis:
+  primary:
+    root: ./openapi/swagger.json
+    x-openapi-ts:
+      output: ./src/gen/schema.ts
