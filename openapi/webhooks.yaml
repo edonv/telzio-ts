@@ -218,6 +218,7 @@ components:
     CallCreatedBody:
       description: Test.
       allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
         - type: object
           required: 
             - EventType
@@ -252,7 +253,6 @@ components:
               type: number
               description: Minute rate for this call. A decimal.
               format: float
-        - $ref: "#/components/schemas/WebhookBody"
     CallEndedBody:
       allOf: 
         - $ref: "#/components/schemas/WebhookBody"
