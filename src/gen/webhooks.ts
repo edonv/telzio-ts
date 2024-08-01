@@ -395,11 +395,39 @@ export interface webhooks {
         patch?: never;
         trace?: never;
     };
+    callFlowEntered: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** @description This event is fired when a call is tagged by the Tag action in a call flow. */
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: components["requestBodies"]["CallFlowEntered"];
+            responses: {
+                200: components["responses"]["Success"];
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export interface components {
     schemas: {
         /** @enum {string} */
-        WebhookEventType: "call_created" | "call_ended" | "call_hungup" | "child_call_connected" | "child_call_created" | "call_recording_ready" | "sms_processed" | "voicemail_received" | "attended_transfer" | "blind_transfer" | "fax_received" | "call_updated" | "call_tagged";
+        WebhookEventType: "call_created" | "call_ended" | "call_hungup" | "call_status_changed" | "child_call_connected" | "child_call_created" | "call_recording_ready" | "sms_processed" | "voicemail_received" | "attended_transfer" | "blind_transfer" | "fax_received" | "call_updated" | "call_tagged" | "call_flow_updated";
         /** @enum {string} */
         CallDirection: "inbound" | "outbound";
         CallStatusType: "initializing" | "ringing" | "in-progress" | "cancel" | "noanswer" | "completed";
@@ -407,11 +435,7 @@ export interface components {
         /** @description General shared schema for all webhook request bodies. */
         WebhookBody: {
             EventType: components["schemas"]["WebhookEventType"];
-            /**
-             * Format: date-time
-             * @description ISO 8601 Formatted date string.
-             */
-            date: string;
+            date: string | null;
         };
         /** @description `call_created` event data. */
         CallCreatedBody: components["schemas"]["WebhookBody"] & {
@@ -426,8 +450,9 @@ export interface components {
             direction: components["schemas"]["CallDirection"];
             /** @description Either a username or E164 number (+ prefixed). */
             from: string;
+            from_extension?: string | null;
             /** @description CNAM of caller, if present. */
-            from_cnam?: string;
+            from_cnam?: string | "<unknown>";
             /** @description Extension dialed by user for `'outbound'`, E164 number dialed for `'inbound'`. */
             to: string;
             /**
@@ -435,6 +460,11 @@ export interface components {
              * @description Minute rate for this call. A decimal.
              */
             rate: number;
+            /**
+             * @description Enum def not final.
+             * @enum {string}
+             */
+            type?: "dial";
         };
         /** @description `call_ended` event data. */
         CallEndedBody: components["schemas"]["WebhookBody"] & {
@@ -448,7 +478,8 @@ export interface components {
             /** @description Id of parent call if this is a child call. Null if this is a parent call. */
             parent_call_id: components["schemas"]["CallIdentifier"] | null;
             /** @description Call status of this call when it was ended. */
-            call_status: string;
+            call_status: components["schemas"]["CallStatusType"];
+            direction?: components["schemas"]["CallDirection"];
             /** @description A hint as to why the call was ended. */
             reason: string;
             /** @description Either a username or E164 number (+ prefixed). */
@@ -480,6 +511,7 @@ export interface components {
              * @description Free Minutes spent from call by this call in seconds. An integer.
              */
             free_minutes: number;
+            was_missed_call?: boolean;
         };
         /** @description `call_hungup` event data. */
         CallHungUpBody: components["schemas"]["WebhookBody"] & {
@@ -490,18 +522,20 @@ export interface components {
             EventType: "call_hungup";
             /** @description A unique identifier for this call. */
             call_id: components["schemas"]["CallIdentifier"];
+            parent_call_id: components["schemas"]["CallIdentifier"] | null;
         };
-        /** @description `CallStatusChanged` event data. */
+        /** @description `call_status_changed` event data. */
         CallStatusChangedBody: components["schemas"]["WebhookBody"] & {
             /**
-             * @description Has the value "call_hungup" for this event.
+             * @description Has the value "call_status_changed" for this event.
              * @enum {string}
              */
-            EventType: "call_hungup";
+            EventType: "call_status_changed";
             /** @description A unique identifier for this call. */
             call_id: components["schemas"]["CallIdentifier"];
+            parent_call_id: components["schemas"]["CallIdentifier"] | null;
             /** @description The new status being transitioned into. */
-            status?: components["schemas"]["CallStatusType"];
+            status: components["schemas"]["CallStatusType"];
         };
         /** @description `child_call_connected` event data. */
         ChildCallConnectedBody: components["schemas"]["WebhookBody"] & {
@@ -590,6 +624,11 @@ export interface components {
             EventType: "voicemail_received";
             /** @description Unique identifier of parent call where this message was received. */
             call_id: components["schemas"]["CallIdentifier"];
+            parent_call_id: components["schemas"]["CallIdentifier"] | null;
+            /** @description Name of call flow used. (Typing not final. Could be null?) */
+            call_flow?: string;
+            /** @description (Typing not final. Only seen null as an option.) */
+            flow_action_title?: string | null;
             /** @description Username who received this voicemail. */
             username: string;
             /** @description E164 number this recording is from. */
@@ -599,13 +638,21 @@ export interface components {
             /** @description E164 number dialed when message was recorded. */
             to: string;
             /** @description Automatic transcription text of the audio recording, if present. */
-            transcription?: string;
+            transcription: string | null;
+            /**
+             * Format: url
+             * @description Url where the voicemail can be accessed.
+             */
+            url: string;
             /**
              * Format: url
              * @description Url where the recording can be downloaded from.
              */
-            url: string;
-            /** @description Recording duration, in seconds. */
+            file?: string;
+            /**
+             * Format: integer
+             * @description Recording duration, in seconds.
+             */
             duration: number;
         };
         /** @description `attended_transfer` event data. */
@@ -733,6 +780,19 @@ export interface components {
             /** @description Tags assigned to the call */
             tags: string[];
         };
+        /** @description `CallFlowEntered` event data. */
+        CallFlowEnteredBody: components["schemas"]["WebhookBody"] & {
+            /**
+             * @description Has the value "call_flow_entered" for this event.
+             * @enum {string}
+             */
+            EventType: "call_flow_entered";
+            /** @description A unique identifier for this call. */
+            call_id: components["schemas"]["CallIdentifier"];
+            call_flow_name: string;
+            /** @description The call flow's extension. */
+            call_flow_extension: string | null;
+        };
     };
     responses: {
         /** @description A response that indicates that the consuming API has accepted and used the event successfully.
@@ -830,6 +890,12 @@ export interface components {
             content: {
                 "application/json": components["schemas"]["CallTaggedBody"];
                 "application/x-www-form-urlencoded": components["schemas"]["CallTaggedBody"];
+            };
+        };
+        CallFlowEntered: {
+            content: {
+                "application/json": components["schemas"]["CallFlowEnteredBody"];
+                "application/x-www-form-urlencoded": components["schemas"]["CallFlowEnteredBody"];
             };
         };
     };
