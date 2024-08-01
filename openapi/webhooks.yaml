@@ -246,6 +246,10 @@ components:
             from:
               type: string
               description: Either a username or E164 number (+ prefixed).
+            from_extension:
+              oneOf: 
+                - type: string
+                - type: "null"
             from_cnam:
               type: string
               description: CNAM of caller, if present.
