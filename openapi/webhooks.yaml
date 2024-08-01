@@ -251,8 +251,12 @@ components:
                 - type: string
                 - type: "null"
             from_cnam:
-              type: string
               description: CNAM of caller, if present.
+              oneOf:
+                - type: string
+                - type: string
+                  enum:
+                    - <unknown>
             to:
               type: string
               description: Extension dialed by user for `'outbound'`, E164 number dialed for `'inbound'`.
