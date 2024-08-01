@@ -264,6 +264,11 @@ components:
               type: number
               description: Minute rate for this call. A decimal.
               format: float
+            type:
+              type: string
+              description: Enum def not final.
+              enum:
+                - dial
     CallEndedBody:
       description: '`call_ended` event data.'
       allOf:
