@@ -347,6 +347,7 @@ components:
         required: 
           - EventType
           - call_id
+          - parent_call_id
         properties:
           EventType:
             type: string
@@ -356,6 +357,10 @@ components:
           call_id: 
             $ref: "#/components/schemas/CallIdentifier"
             description: A unique identifier for this call.
+          parent_call_id:
+            oneOf: 
+              - $ref: "#/components/schemas/CallIdentifier"
+              - type: 'null'
     CallStatusChangedBody:
       description: '`call_status_changed` event data.'
       allOf:
@@ -364,6 +369,7 @@ components:
           required: 
             - EventType
             - call_id
+            - parent_call_id
           properties:
             EventType:
               type: string
@@ -373,6 +379,10 @@ components:
             call_id: 
               $ref: "#/components/schemas/CallIdentifier"
               description: A unique identifier for this call.
+            parent_call_id:
+              oneOf: 
+                - $ref: "#/components/schemas/CallIdentifier"
+                - type: 'null'
             status:
               $ref: "#/components/schemas/CallStatusType"
               description: The new status being transitioned into.
@@ -517,6 +527,7 @@ components:
           required: 
             - EventType
             - call_id
+            - parent_call_id
             - username
             - from
             - to
@@ -531,6 +542,10 @@ components:
             call_id: 
               $ref: "#/components/schemas/CallIdentifier"
               description: Unique identifier of parent call where this message was received.
+            parent_call_id:
+              oneOf: 
+                - $ref: "#/components/schemas/CallIdentifier"
+                - type: 'null'
             username: 
               type: string
               description: Username who received this voicemail.
