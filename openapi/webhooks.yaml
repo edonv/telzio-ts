@@ -548,6 +548,14 @@ components:
               oneOf: 
                 - $ref: "#/components/schemas/CallIdentifier"
                 - type: 'null'
+            call_flow:
+              type: string
+              description: Name of call flow used. (Typing not final. Could be null?)
+            flow_action_title: 
+              description: (Typing not final. Only seen null as an option.)
+              oneOf: 
+                - type: string
+                - type: 'null'
             username: 
               type: string
               description: Username who received this voicemail.
@@ -567,11 +575,16 @@ components:
                 - type: 'null'
             url: 
               type: string
+              description: Url where the voicemail can be accessed.
+              format: url
+            file:
+              type: string
               description: Url where the recording can be downloaded from.
               format: url
             duration: 
               type: number
               description: Recording duration, in seconds.
+              format: integer
     AttendedTransferBody:
       description: '`attended_transfer` event data.'
       allOf:
