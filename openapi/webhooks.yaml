@@ -216,7 +216,7 @@ components:
           description: ISO 8601 Formatted date string.
           format: date-time
     CallCreatedBody:
-      description: '`CallCreated` event data.'
+      description: '`call_created` event data.'
       allOf: 
         - $ref: "#/components/schemas/WebhookBody"
         - type: object
@@ -254,7 +254,7 @@ components:
               description: Minute rate for this call. A decimal.
               format: float
     CallEndedBody:
-      description: '`CallEnded` event data.'
+      description: '`call_ended` event data.'
       allOf:
         - $ref: "#/components/schemas/WebhookBody"
         - type: object
@@ -318,7 +318,7 @@ components:
               description: Free Minutes spent from call by this call in seconds. An integer.
               format: integer
     CallHungUpBody:
-      description: '`CallHungUp` event data.'
+      description: '`call_hungup` event data.'
       allOf:
       - $ref: "#/components/schemas/WebhookBody"
       - type: object
@@ -355,7 +355,7 @@ components:
               $ref: "#/components/schemas/CallStatusType"
               description: The new status being transitioned into.
     ChildCallConnectedBody:
-      description: '`ChildCallConnected` event data.'
+      description: '`child_call_connected` event data.'
       allOf:
         - $ref: "#/components/schemas/WebhookBody"
         - type: object
@@ -376,7 +376,7 @@ components:
               $ref: "#/components/schemas/CallIdentifier"
               description: Id of parent call this call belongs to.
     ChildCallCreatedBody:
-      description: '`ChildCallCreated` event data.'
+      description: '`child_call_created` event data.'
       allOf:
         - $ref: "#/components/schemas/WebhookBody"
         - type: object
@@ -410,7 +410,7 @@ components:
               description: Minute rate for this call. A decimal.
               format: float
     RecordingReadyBody:
-      description: '`RecordingReady` event data.'
+      description: '`call_recording_ready` event data.'
       allOf:
         - $ref: "#/components/schemas/WebhookBody"
         - type: object
@@ -455,7 +455,7 @@ components:
               description: Url where the recording can be downloaded from.
               format: url
     SMSSentReceivedBody:
-      description: '`SMSSentReceived` event data.'
+      description: '`sms_processed` event data.'
       allOf:
         - $ref: "#/components/schemas/WebhookBody"
         - type: object
@@ -488,7 +488,7 @@ components:
               $ref: "#/components/schemas/CallDirection"
               description: Inbound or outbound.
     VoicemailReceivedBody:
-      description: '`VoicemailReceived` event data.'
+      description: '`voicemail_received` event data.'
       allOf:
         - $ref: "#/components/schemas/WebhookBody"
         - type: object
@@ -532,7 +532,7 @@ components:
               type: number
               description: Recording duration, in seconds.
     AttendedTransferBody:
-      description: '`AttendedTransfer` event data.'
+      description: '`attended_transfer` event data.'
       allOf:
         # does not include the date field
         # - $ref: "#/components/schemas/WebhookBody"
@@ -594,7 +594,7 @@ components:
               type: string
               description: Extension assigned to transferee_user, or E164 phone number.
     BlindTransferBody:
-      description: '`BlindTransfer` event data.'
+      description: '`blind_transfer` event data.'
       allOf:
         # does not include the date field
         # - $ref: "#/components/schemas/WebhookBody"
@@ -646,7 +646,7 @@ components:
               type: string
               description: The extension transferee is transferred to.
     FaxReceivedBody:
-      description: '`FaxReceived` event data.'
+      description: '`fax_received` event data.'
       allOf:
         - $ref: "#/components/schemas/WebhookBody"
         - type: object
@@ -681,7 +681,7 @@ components:
               description: The URL this fax can be downloaded in PDF format from.
               format: url
     CallUpdatedBody:
-      description: '`CallUpdated` event data.'
+      description: '`call_updated` event data.'
       allOf:
         - $ref: "#/components/schemas/WebhookBody"
         - type: object
@@ -718,7 +718,7 @@ components:
               #       from_cnam: 
               #       spam_score:
     CallTaggedBody:
-      description: '`CallTagged` event data.'
+      description: '`call_tagged` event data.'
       allOf:
         - $ref: "#/components/schemas/WebhookBody"
         - type: object
