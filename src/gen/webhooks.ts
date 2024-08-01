@@ -516,7 +516,7 @@ export interface components {
              * @description Has the value "child_call_created" for this event.
              * @enum {string}
              */
-            EventType: "call_hungup";
+            EventType: "child_call_created";
             /** @description A unique identifier for this call. */
             call_id: components["schemas"]["CallIdentifier"];
             /** @description Id of parent call this call belongs to. */
