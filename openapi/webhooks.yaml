@@ -532,6 +532,7 @@ components:
             - username
             - from
             - to
+            - transcription
             - url
             - duration
           properties:
@@ -560,8 +561,10 @@ components:
               type: string
               description: E164 number dialed when message was recorded.
             transcription: 
-              type: string
               description: Automatic transcription text of the audio recording, if present.
+              oneOf: 
+                - type: string
+                - type: 'null'
             url: 
               type: string
               description: Url where the recording can be downloaded from.
