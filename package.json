@@ -1,6 +1,6 @@
 {
   "name": "telzio-ts",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Node package for Telzio API v3.",
   "type": "module",
   "author": "edonv",
