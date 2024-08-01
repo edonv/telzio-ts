@@ -370,6 +370,7 @@ components:
             - EventType
             - call_id
             - parent_call_id
+            - status
           properties:
             EventType:
               type: string
