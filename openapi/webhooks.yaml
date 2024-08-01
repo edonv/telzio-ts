@@ -287,8 +287,8 @@ components:
                 - $ref: "#/components/schemas/CallIdentifier"
                 - type: 'null'
             call_status:
-              type: string
               description: Call status of this call when it was ended.
+              $ref: "#/components/schemas/CallStatusType"
             reason:
               type: string
               description: A hint as to why the call was ended.
