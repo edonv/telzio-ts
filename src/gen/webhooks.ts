@@ -413,8 +413,8 @@ export interface components {
              */
             date: string;
         };
-        /** @description Test. */
-        CallCreatedBody: {
+        /** @description `call_created` event data. */
+        CallCreatedBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value 'call_created' for this event.
              * @enum {string}
@@ -435,10 +435,11 @@ export interface components {
              * @description Minute rate for this call. A decimal.
              */
             rate: number;
-        } & components["schemas"]["WebhookBody"];
+        };
+        /** @description `call_ended` event data. */
         CallEndedBody: components["schemas"]["WebhookBody"] & {
             /**
-             * @description Has the value 'call_created' for this event.
+             * @description Has the value 'call_ended' for this event.
              * @enum {string}
              */
             EventType: "call_ended";
@@ -480,6 +481,7 @@ export interface components {
              */
             free_minutes: number;
         };
+        /** @description `call_hungup` event data. */
         CallHungUpBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value "call_hungup" for this event.
@@ -489,6 +491,7 @@ export interface components {
             /** @description A unique identifier for this call. */
             call_id: components["schemas"]["CallIdentifier"];
         };
+        /** @description `CallStatusChanged` event data. */
         CallStatusChangedBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value "call_hungup" for this event.
@@ -500,6 +503,7 @@ export interface components {
             /** @description The new status being transitioned into. */
             status?: components["schemas"]["CallStatusType"];
         };
+        /** @description `child_call_connected` event data. */
         ChildCallConnectedBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value "child_call_connected" for this event.
@@ -511,6 +515,7 @@ export interface components {
             /** @description Id of parent call this call belongs to. */
             parent_call_id: components["schemas"]["CallIdentifier"];
         };
+        /** @description `child_call_created` event data. */
         ChildCallCreatedBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value "child_call_created" for this event.
@@ -531,6 +536,7 @@ export interface components {
              */
             rate: number;
         };
+        /** @description `call_recording_ready` event data. */
         RecordingReadyBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value "call_recording_ready" for this event.
@@ -557,6 +563,7 @@ export interface components {
              */
             url: string;
         };
+        /** @description `sms_processed` event data. */
         SMSSentReceivedBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value "sms_processed" for this event.
@@ -574,6 +581,7 @@ export interface components {
             /** @description Inbound or outbound. */
             direction: components["schemas"]["CallDirection"];
         };
+        /** @description `voicemail_received` event data. */
         VoicemailReceivedBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value "voicemail_received" for this event.
@@ -600,6 +608,7 @@ export interface components {
             /** @description Recording duration, in seconds. */
             duration: number;
         };
+        /** @description `attended_transfer` event data. */
         AttendedTransferBody: {
             EventType: components["schemas"]["WebhookEventType"];
         } & {
@@ -633,6 +642,7 @@ export interface components {
             /** @description Extension assigned to transferee_user, or E164 phone number. */
             transferee_extension: string;
         };
+        /** @description `blind_transfer` event data. */
         BlindTransferBody: {
             EventType: components["schemas"]["WebhookEventType"];
         } & {
@@ -660,6 +670,7 @@ export interface components {
             /** @description The extension transferee is transferred to. */
             transfer_destination: string;
         };
+        /** @description `fax_received` event data. */
         FaxReceivedBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value "fax_received" for this event.
@@ -683,6 +694,7 @@ export interface components {
              */
             api_download_url: string;
         };
+        /** @description `call_updated` event data. */
         CallUpdatedBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value "call_updated" for this event.
@@ -701,6 +713,7 @@ export interface components {
                 [key: string]: string | undefined;
             };
         };
+        /** @description `call_tagged` event data. */
         CallTaggedBody: components["schemas"]["WebhookBody"] & {
             /**
              * @description Has the value "call_tagged" for this event.
