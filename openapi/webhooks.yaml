@@ -698,7 +698,6 @@ components:
             call_id: 
               $ref: "#/components/schemas/CallIdentifier"
               description: A unique identifier for this call.
-
             updated_properties:
               type: object
               description: |
