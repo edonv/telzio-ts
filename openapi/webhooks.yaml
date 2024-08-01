@@ -309,6 +309,8 @@ components:
             reason:
               type: string
               description: A hint as to why the call was ended.
+              examples:
+                - Normal Clearing
             from:
               type: string
               description: Either a username or E164 number (+ prefixed).
