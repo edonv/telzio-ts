@@ -213,9 +213,11 @@ components:
         EventType:
           $ref: "#/components/schemas/WebhookEventType"
         date:
-          type: string
-          description: ISO 8601 Formatted date string.
-          format: date-time
+          oneOf: 
+            - type: string
+              description: ISO 8601 Formatted date string.
+              format: date-time
+            - type: 'null'
     CallCreatedBody:
       description: '`call_created` event data.'
       allOf: 
