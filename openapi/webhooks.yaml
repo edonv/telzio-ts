@@ -1,0 +1,892 @@
+openapi: "3.1.0"
+externalDocs: 
+  url: https://telzio.com/support/developers/docs/webhooks/webhook-basics
+  description: Learn how to get started with Telzio webhooks.
+info:
+  title: Telzio Webhooks API
+  version: v3
+  description: |
+    ## General
+    When configuring your webhook you have two choices of format: `JSON` or `x-www-form-urlencoded`.
+
+    The consuming API has 15 seconds to accept the event. If a success http status code has not been returned with these 15 seconds, the event will be discarded and the engine will proceed to the next one.
+
+    Only one event is dispatched at a time, and in sequence. There is no parallel dispatch against a single customer end point, and the engine will not try to resend a failed request.
+
+    If a consuming API consistently fails over a period of time, the engine will suspend delivery until the customer manually re-enables distribution of events.
+
+    The Telzio webhook supports authenticating against the customer API using either a, by the customer specified, Bearer Token or Basic Authentication. In both cases the customer enters either the token or credentials for basic auth on the Telzio website.
+
+    ## Authentication
+    In case of Bearer token authentication, the engine will issue all HTTP Requests with the following Header: `Authorization: Bearer`
+
+    In case of Basic Authentication it will be as follows: `Authorization: Basic`
+
+webhooks:
+  callCreated:
+    post:
+      description: This webhook event is fired whenever a parent call is created.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody:
+        $ref: "#/components/requestBodies/CallCreated"
+  callEnded:
+    post: 
+      description: This webhook event is fired when a call is ended.
+      requestBody: 
+        $ref: "#/components/requestBodies/CallEnded"
+  callHungUp:
+    post: 
+      description: This event is fired when a call hangs up. This event can be used to determine which end of a conversation ended the call.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/CallHungUp"
+  callStatusChanged:
+    post: 
+      description: This event is fired whenever the status of a call is changed. For instance this can be when a call is answered, canceled or isn’t answered.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/CallStatusChanged"
+  childCallConnected:
+    post: 
+      description: This event is fired whenever a parent call is connected with a child call, and voice communication is established.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/ChildCallConnected"
+  childCallCreated:
+    post: 
+      description: This event is fired when a child call (a B leg on a call) is created. These always contain a reference to the parent call that created them.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/ChildCallCreated"
+  recordingReady:
+    post: 
+      description: This webhook event is fired when a call is recorded and the mp3 file is ready to be downloaded.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/RecordingReady"
+  smsSentReceived:
+    post: 
+      description: This event is fired when an SMS is received or sent on the account.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/SMSSentReceived"
+  voicemailReceived:
+    post: 
+      description: This event is fired when a voicemail is received.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/VoicemailReceived"
+  attendedTransfer:
+    post: 
+      description: This event is fired when a user performs an attended transfer.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/AttendedTransfer"
+  blindTransfer:
+    post: 
+      description: This event is fired when a user performs a blind transfer.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/BlindTransfer"
+  faxReceived:
+    post: 
+      description: This event is fired when a fax is received.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/FaxReceived"
+  callUpdated:
+    post: 
+      description: Sometimes call details are updated after they are created, and such updates will trigger a "call_updated" webhook event.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/CallUpdated"
+  callTagged:
+    post: 
+      description: This event is fired when a call is tagged by the Tag action in a call flow.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/CallTagged"
+
+security: 
+  - bearer: []
+  - basic: []
+components: 
+  schemas:
+    WebhookEventType:
+      type: string
+      enum:
+        - call_created
+        - call_ended
+        - call_hungup
+        - child_call_connected
+        - child_call_created
+        - call_recording_ready
+        - sms_processed
+        - voicemail_received
+        - attended_transfer
+        - blind_transfer
+        - fax_received
+        - call_updated
+        - call_tagged
+    CallDirection:
+      type: string
+      enum: 
+        - inbound
+        - outbound
+    CallStatusType:
+      oneOf: 
+        - title: Initializing
+          const: 'initializing'
+          description: |
+            Call has been created and is processing.
+
+            Possible from: Has the value "child_call_connected" for this event.
+        - title: Ringing
+          const: 'ringing'
+          description: |
+            Call is ringing (either getting a dial tone or a phone is ringing).
+
+            Possible from: `initializing`
+        - title: InProgress
+          const: 'in-progress'
+          description: |
+            Call is connected and voice communication is possible.
+
+            Possible from: `initializing`, `ringing`
+        - title: Cancel
+          const: 'cancel'
+          description: |
+            Caller hung up before a the line was answered.
+
+            Possible from: `initializing`, `ringing`
+        - title: NoAnswer
+          const: 'noanswer'
+          description: |
+            Caller was hung up without being connected (rang out).
+
+            Possible from: `initializing`, `ringing`, `in-progress`
+        - title: Completed
+          const: 'completed'
+          description: |
+            Call was hung up after voice communication had successfully been established.
+
+            Possible from: `in-progress`
+    CallIdentifier:
+      type: string
+      examples:
+        - '11-312298b3-12a342'
+        - '7-5fda90e0-2a'
+    WebhookBody:
+      description: General shared schema for all webhook request bodies.
+      type: object
+      required: 
+        - EventType
+        - date
+      properties: 
+        EventType:
+          $ref: "#/components/schemas/WebhookEventType"
+        date:
+          type: string
+          description: ISO 8601 Formatted date string.
+          format: date-time
+    CallCreatedBody:
+      description: Test.
+      allOf: 
+        - type: object
+          required: 
+            - EventType
+            - call_id
+            - direction
+            - from
+            - to
+            - rate
+            - date
+          properties: 
+            EventType:
+              type: string
+              enum:
+                - 'call_created'
+              description: Has the value 'call_created' for this event.
+            call_id: 
+              $ref: "#/components/schemas/CallIdentifier"
+              description: A unique identifier for this call.
+            direction:
+              $ref: "#/components/schemas/CallDirection"
+              description: Either `'inbound'` or `'outbound'`.
+            from:
+              type: string
+              description: Either a username or E164 number (+ prefixed).
+            from_cnam:
+              type: string
+              description: CNAM of caller, if present.
+            to:
+              type: string
+              description: Extension dialed by user for `'outbound'`, E164 number dialed for `'inbound'`.
+            rate:
+              type: number
+              description: Minute rate for this call. A decimal.
+              format: float
+        - $ref: "#/components/schemas/WebhookBody"
+    CallEndedBody:
+      allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - call_id
+            - parent_call_id
+            - call_status
+            - reason
+            - from
+            - to
+            - duration
+            - billed_duration
+            - price
+            - rate
+            - free_minutes
+          properties: 
+            EventType:
+              type: string
+              enum:
+                - 'call_ended'
+              description: Has the value 'call_created' for this event.
+            call_id: 
+              $ref: "#/components/schemas/CallIdentifier"
+              description: A unique identifier for this call.
+            parent_call_id:
+              description: Id of parent call if this is a child call. Null if this is a parent call.
+              oneOf: 
+                - $ref: "#/components/schemas/CallIdentifier"
+                - type: 'null'
+            call_status:
+              type: string
+              description: Call status of this call when it was ended.
+            reason:
+              type: string
+              description: A hint as to why the call was ended.
+            from:
+              type: string
+              description: Either a username or E164 number (+ prefixed).
+            to:
+              type: string
+              description: Either a username or E164 number (+ prefixed).
+            duration:
+              type: number
+              description: The duration of the call from start to finish in seconds. An integer.
+              format: integer
+            billed_duration:
+              type: number
+              description: The part of the call where voice was exchanged in seconds. An integer.
+              format: integer
+            price:
+              type: number
+              description: Total price of this call. A decimal.
+              format: float
+            rate:
+              type: number
+              description: Minute rate of this call. A decimal.
+              format: float
+            free_minutes:
+              type: number
+              description: Free Minutes spent from call by this call in seconds. An integer.
+              format: integer
+    CallHungUpBody:
+      allOf: 
+      - $ref: "#/components/schemas/WebhookBody"
+      - type: object
+        required: 
+          - EventType
+          - call_id
+        properties:
+          EventType:
+            type: string
+            enum:
+              - 'call_hungup'
+            description: Has the value "call_hungup" for this event.
+          call_id: 
+            $ref: "#/components/schemas/CallIdentifier"
+            description: A unique identifier for this call.
+    CallStatusChangedBody:
+      allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - call_id
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'call_hungup'
+              description: Has the value "call_hungup" for this event.
+            call_id: 
+              $ref: "#/components/schemas/CallIdentifier"
+              description: A unique identifier for this call.
+            status:
+              $ref: "#/components/schemas/CallStatusType"
+              description: The new status being transitioned into.
+    ChildCallConnectedBody:
+      allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - call_id
+            - parent_call_id
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'child_call_connected'
+              description: Has the value "child_call_connected" for this event.
+            call_id: 
+              $ref: "#/components/schemas/CallIdentifier"
+              description: A unique identifier for this call.
+            parent_call_id:
+              $ref: "#/components/schemas/CallIdentifier"
+              description: Id of parent call this call belongs to.
+    ChildCallCreatedBody:
+      allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - call_id
+            - parent_call_id
+            - from
+            - to
+            - rate
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'call_hungup'
+              description: Has the value "child_call_created" for this event.
+            call_id: 
+              $ref: "#/components/schemas/CallIdentifier"
+              description: A unique identifier for this call.
+            parent_call_id:
+              $ref: "#/components/schemas/CallIdentifier"
+              description: Id of parent call this call belongs to.
+            from:
+              type: string
+              description: Either a username or E164 number (+ prefixed).
+            to:
+              type: string
+              description: Extension dialed by user for outbound, E164 number dialed for inbound.
+            rate:
+              type: number
+              description: Minute rate for this call. A decimal.
+              format: float
+    RecordingReadyBody:
+      allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - call_id
+            - recording_id
+            - username
+            - call_flow
+            - from
+            - to
+            - url
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'call_recording_ready'
+              description: Has the value "call_recording_ready" for this event.
+            call_id: 
+              $ref: "#/components/schemas/CallIdentifier"
+              description: Unique identifier of parent call where this message was received.
+            recording_id: 
+              type: string
+              description: An ID for the recording.
+            username: 
+              type: string
+              description: Username who received this voicemail.
+            call_flow: 
+              type: string
+              description: Call flow which this recording was made in.
+            from: 
+              type: string
+              description: E164 number this recording is from.
+            from_name: 
+              type: string
+              description: Name of caller, if present.
+            to: 
+              type: string
+              description: E164 number dialed when message was recorded.
+            url: 
+              type: string
+              description: Url where the recording can be downloaded from.
+              format: url
+    SMSSentReceivedBody:
+      allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - sms_id
+            - from
+            - to
+            - message
+            - direction
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'sms_processed'
+              description: Has the value "sms_processed" for this event.
+            sms_id: 
+              type: string
+              description: Unique identifier for the SMS Message.
+            from: 
+              type: string
+              description: E164 number this SMS was sent from.
+            to: 
+              type: string
+              description: E164 number this SMS was sent from.
+            message: 
+              type: string
+              description: Content of the message.
+            direction: 
+              $ref: "#/components/schemas/CallDirection"
+              description: Inbound or outbound.
+    VoicemailReceivedBody:
+      allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - call_id
+            - username
+            - from
+            - to
+            - url
+            - duration
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'voicemail_received'
+              description: Has the value "voicemail_received" for this event.
+            call_id: 
+              $ref: "#/components/schemas/CallIdentifier"
+              description: Unique identifier of parent call where this message was received.
+            username: 
+              type: string
+              description: Username who received this voicemail.
+            from: 
+              type: string
+              description: E164 number this recording is from.
+            from_name: 
+              type: string
+              description: Name of caller, if present.
+            to: 
+              type: string
+              description: E164 number dialed when message was recorded.
+            transcription: 
+              type: string
+              description: Automatic transcription text of the audio recording, if present.
+            url: 
+              type: string
+              description: Url where the recording can be downloaded from.
+              format: url
+            duration: 
+              type: number
+              description: Recording duration, in seconds.
+    AttendedTransferBody:
+      allOf: 
+        # does not include the date field
+        # - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+          properties:
+            EventType:
+              $ref: "#/components/schemas/WebhookEventType"
+        - type: object
+          required: 
+            - EventType
+            - transferTarget_call_id
+            - transferTarget_extension
+            - transferer_call_id
+            - transferer_user
+            - transferee_call_id
+            - transferee_extension
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'attended_transfer'
+              description: Has the value "attended_transfer" for this event.
+            transferTarget_call_id:
+              type: string
+              description: Call ID of the call that transferee is transferred to.
+            transferTarget_parent_call_id:
+              type: string
+              description: Parent Call ID of the call that transferee is transferred to, if any.
+            transferTarget_user:
+              type: string
+              description: The username of the user transferee is being transferred to, if applicable.
+            transferTarget_extension:
+              type: string
+              description: Either extension assigned transferTarget_user, or the E164 phone number being transferred to.
+            transferer_call_id:
+              type: string
+              description: Call ID of the call that issues the transfer.
+            transferer_parent_call_id:
+              type: string
+              description: Parent Call ID in case transferer_call_id is a child call.
+            transferer_user:
+              type: string
+              description: The username of the transferer.
+            transferer_extension:
+              type: string
+              description: The extension assigned to transferer, if any.
+            transferee_call_id:
+              type: string
+              description: Call ID of the call that is being transferred.
+            transferee_parent_call_id:
+              type: string
+              description: If the call being transferred is a child call, this is the ID of the parent call it belongs to.
+            transferee_user:
+              type: string
+              description: The username of the user being transferred, if any.
+            transferee_extension:
+              type: string
+              description: Extension assigned to transferee_user, or E164 phone number.
+    BlindTransferBody:
+      allOf: 
+        # does not include the date field
+        # - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+          properties:
+            EventType:
+              $ref: "#/components/schemas/WebhookEventType"
+        - type: object
+          required: 
+            - EventType
+            - transferer_call_id
+            - transferer_user
+            - transferee_call_id
+            - transferee_user
+            - transfer_destination
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'blind_transfer'
+              description: Has the value "blind_transfer" for this event.
+            transferer_call_id:
+              type: string
+              description: Call ID of the call that issues the transfer.
+            transferer_parent_call_id:
+              type: string
+              description: Parent Call ID in case this call is a child call.
+            transferer_user:
+              type: string
+              description: The username this call belongs to.
+            transferer_extension:
+              type: string
+              description: If user is set, this is that users extension.
+            transferee_call_id:
+              type: string
+              description: Call ID of the call that is being transferred.
+            transferee_parent_call_id:
+              type: string
+              description: If the call being transferred is a child call, this is the ID of the parent call it belongs to.
+            transferee_user:
+              type: string
+              description: The username of the user this call belongs to.
+            transferee_extension:
+              type: string
+              description: If user is set, this is that users extension.
+            transfer_destination:
+              type: string
+              description: The extension transferee is transferred to.
+    FaxReceivedBody:
+      allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - fax_id
+            - from
+            - to
+            - api_details_url
+            - api_download_url
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'fax_received'
+              description: Has the value "fax_received" for this event.
+            fax_id:
+              type: string
+              description: Unique identifier for this fax.
+            from:
+              type: string
+              description: E164 formatted phone number this fax was sent from.
+            to:
+              type: string
+              description: E164 formatted phone number this number was sent to.
+            api_details_url:
+              type: string
+              description: The URL to this fax in the Telzio api.
+              format: url
+            api_download_url:
+              type: string
+              description: The URL this fax can be downloaded in PDF format from.
+              format: url
+    CallUpdatedBody:
+      allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - call_id
+            - updated_properties
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'call_updated'
+              description: Has the value "call_updated" for this event.
+            call_id: 
+              $ref: "#/components/schemas/CallIdentifier"
+              description: A unique identifier for this call.
+
+            updated_properties:
+              type: object
+              description: |
+                Fields updated or added.
+                
+                This event will fire when certain properties of a call are added or updated. Any field of a call can be updated throughout the call.
+                
+                The list below displays an example of two updated properties, but any property of the call details object can be included in this event.
+              externalDocs: 
+                url: https://telzio.com/support/developers/docs/v2/calls
+              additionalProperties: 
+                # TODO: confirm this
+                type: string
+              # examples: 
+              #   example:
+              #     value:
+              #       from_cnam: 
+              #       spam_score:
+    CallTaggedBody:
+      allOf: 
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - call_id
+            - from
+            - to
+            - tags
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'call_tagged'
+              description: Has the value "call_tagged" for this event.
+            call_id: 
+              $ref: "#/components/schemas/CallIdentifier"
+              description: A unique identifier for this call.
+            parent_call_id:
+              type: string
+              description: Id of parent call this call belongs to.
+            from:
+              type: string
+              description: Either a username or E164 number (+ prefixed)
+            from_cnam:
+              type: string
+              description: Cnam of the caller, if available.
+            to:
+              type: string
+              description: Extension dialed by user for outbound, E164 number dialed for inbound.
+            tags:
+              type: array
+              description: Tags assigned to the call
+              items:
+                type: string
+
+  requestBodies:
+    CallCreated:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/CallCreatedBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/CallCreatedBody"
+    CallEnded:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/CallEndedBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/CallEndedBody"
+    CallHungUp:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/CallHungUpBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/CallHungUpBody"
+    CallStatusChanged:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/CallStatusChangedBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/CallStatusChangedBody"
+    ChildCallConnected:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/ChildCallConnectedBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/ChildCallConnectedBody"
+    ChildCallCreated:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/ChildCallCreatedBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/ChildCallCreatedBody"
+    RecordingReady:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/RecordingReadyBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/RecordingReadyBody"
+    SMSSentReceived:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/SMSSentReceivedBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/SMSSentReceivedBody"
+    VoicemailReceived:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/VoicemailReceivedBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/VoicemailReceivedBody"
+    AttendedTransfer:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/AttendedTransferBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/AttendedTransferBody"
+    BlindTransfer:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/BlindTransferBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/BlindTransferBody"
+    FaxReceived:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/FaxReceivedBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/FaxReceivedBody"
+    CallUpdated:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/CallUpdatedBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/CallUpdatedBody"
+    CallTagged:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/CallTaggedBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/CallTaggedBody"
+
+  responses:
+    Success:
+      description: |
+        A response that indicates that the consuming API has accepted and used the event successfully.
+
+        The consuming API has 15 seconds to accept the event. If a success http status code has not been returned with these 15 seconds, the event will be discarded and the engine will proceed to the next one.
+      
+  headers:
+    X-Telzio-Event-Type:
+      description: The event type of a webhook.
+      schema:
+        $ref: "#/components/schemas/WebhookEventType"
+        
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: Bearer
+    basic:
+      type: http
+      scheme: Basic

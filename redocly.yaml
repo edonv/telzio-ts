@@ -3,3 +3,7 @@ apis:
     root: ./openapi/swagger.json
     x-openapi-ts:
       output: ./src/gen/schema.ts
+  webhooks:
+    root: ./openapi/webhooks.yaml
+    x-openapi-ts:
+      output: ./src/gen/webhooks.ts
