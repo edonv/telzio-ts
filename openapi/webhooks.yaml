@@ -386,7 +386,7 @@ components:
             EventType:
               type: string
               enum:
-                - 'call_hungup'
+                - 'child_call_created'
               description: Has the value "child_call_created" for this event.
             call_id: 
               $ref: "#/components/schemas/CallIdentifier"
