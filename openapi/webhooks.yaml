@@ -304,6 +304,8 @@ components:
             call_status:
               description: Call status of this call when it was ended.
               $ref: "#/components/schemas/CallStatusType"
+            direction:
+              $ref: "#/components/schemas/CallDirection"
             reason:
               type: string
               description: A hint as to why the call was ended.
@@ -333,6 +335,8 @@ components:
               type: number
               description: Free Minutes spent from call by this call in seconds. An integer.
               format: integer
+            was_missed_call:
+              type: boolean
     CallHungUpBody:
       description: '`call_hungup` event data.'
       allOf:
