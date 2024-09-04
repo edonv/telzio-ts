@@ -90,6 +90,8 @@ export default class Telzio {
         this.client.use(authMiddleware);
     }
 
+    // TODO: figure out some way to add functions from operationIds
+    // TODO: add static functions that don't require auth
 
     setAPIKey(key: string) {
         this._options.apiKey = key;
