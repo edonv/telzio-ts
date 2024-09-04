@@ -6,7 +6,6 @@
   "description": "Node package for Telzio API v3.",
   "repository": "github:edonv/telzio-ts",
   "author": "edonv",
-  "private": "false",
   "sponsor": {
     "url": "https://github.com/sponsors/edonv"
   },
