@@ -25,10 +25,10 @@
     "/dist/"
   ],
   "dependencies": {
-    "openapi-fetch": "^0.9.3",
-    "typescript": "^5.5.4"
+    "openapi-fetch": "^0.9.8"
   },
   "devDependencies": {
-    "openapi-typescript": "^7.1.1"
+    "openapi-typescript": "^7.4.0",
+    "typescript": "^5.5.4"
   }
 }
