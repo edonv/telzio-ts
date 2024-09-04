@@ -12,7 +12,9 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "declaration": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+
+    "removeComments": true,
   },
   "include": [
     "src/**/*.ts",
