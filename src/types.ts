@@ -1,8 +1,8 @@
-export { paths } from './gen/schema.js';
-export { webhooks } from './gen/webhooks.js';
+export { paths } from './openapi/schema.js';
+export { webhooks } from './openapi/webhooks.js';
 
-import { components as primaryComponents } from './gen/schema.js';
-import { components as webhookComponents } from './gen/webhooks.js';
+import { components as primaryComponents } from './openapi/schema.js';
+import { components as webhookComponents } from './openapi/webhooks.js';
 
 export interface components {
     schemas: primaryComponents['schemas'] & webhookComponents['schemas'],
