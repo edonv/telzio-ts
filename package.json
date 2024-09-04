@@ -1,30 +1,34 @@
 {
   "name": "telzio-ts",
   "version": "0.0.2",
-  "description": "Node package for Telzio API v3.",
   "type": "module",
-  "author": "edonv",
   "license": "MIT",
+  "description": "Node package for Telzio API v3.",
+  "repository": "github:edonv/telzio-ts",
+  "author": "edonv",
+  "private": "false",
+  "sponsor": {
+    "url": "https://github.com/sponsors/edonv"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "test": "tsc && node dist/test/telzio.test.js",
+    "api-gen": "openapi-typescript",
+    "gen-build": "npm run api-gen && npm run build",
+    "publish": "rm -r ./dist ; npm run gen-build && npm publish"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "/dist"
+    "/README.md",
+    "/LICENSE.md",
+    "/dist/"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-api": "openapi-typescript",
-    "build": "tsc",
-    "run": "tsc && node dist/index.js"
-  },
-  "private": "true",
   "dependencies": {
     "openapi-fetch": "^0.9.3",
     "typescript": "^5.5.4"
   },
   "devDependencies": {
     "openapi-typescript": "^7.1.1"
-  },
-  "config": {
-    "apiSpecURL": "https://api.telzio.com/swagger/v3/swagger.json"
   }
 }
