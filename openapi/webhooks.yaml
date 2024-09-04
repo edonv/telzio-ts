@@ -132,6 +132,14 @@ webhooks:
           $ref: "#/components/responses/Success"
       requestBody: 
         $ref: "#/components/requestBodies/CallTagged"
+  callFlowEntered:
+    post: 
+      description: This event is fired when a call is tagged by the Tag action in a call flow.
+      responses: 
+        200:
+          $ref: "#/components/responses/Success"
+      requestBody: 
+        $ref: "#/components/requestBodies/CallFlowEntered"      
 
 security: 
   - bearer: []
@@ -155,6 +163,8 @@ components:
         - fax_received
         - call_updated
         - call_tagged
+
+        - call_flow_updated
     CallDirection:
       type: string
       enum: 
@@ -203,6 +213,7 @@ components:
       examples:
         - '11-312298b3-12a342'
         - '7-5fda90e0-2a'
+        - 'ast011-1722514432.2099012'
     WebhookBody:
       description: General shared schema for all webhook request bodies.
       type: object
@@ -807,6 +818,34 @@ components:
               description: Tags assigned to the call
               items:
                 type: string
+    CallFlowEnteredBody:
+      description: '`CallFlowEntered` event data.'
+      allOf:
+        - $ref: "#/components/schemas/WebhookBody"
+        - type: object
+          required: 
+            - EventType
+            - call_id
+            - call_flow_name
+            - call_flow_extension
+            - date
+          properties:
+            EventType:
+              type: string
+              enum:
+                - 'call_flow_entered'
+              description: Has the value "call_flow_entered" for this event.
+            call_id: 
+              $ref: "#/components/schemas/CallIdentifier"
+              description: A unique identifier for this call.
+            call_flow_name:
+              type: string
+            call_flow_extension:
+              description: The call flow's extension.
+              oneOf:
+                - type: string
+                - type: 'null'
+
 
   requestBodies:
     CallCreated:
@@ -935,6 +974,15 @@ components:
         application/x-www-form-urlencoded:
           schema: 
             $ref: "#/components/schemas/CallTaggedBody"
+    CallFlowEntered:
+      required: true
+      content:
+        application/json:
+          schema: 
+            $ref: "#/components/schemas/CallFlowEnteredBody"
+        application/x-www-form-urlencoded:
+          schema: 
+            $ref: "#/components/schemas/CallFlowEnteredBody"
 
   responses:
     Success:
