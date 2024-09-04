@@ -16,8 +16,8 @@
     "gen-build": "npm run api-gen && npm run build",
     "publish": "rm -r ./dist ; npm run gen-build && npm publish"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/telzio.js",
+  "types": "dist/telzio.d.ts",
   "files": [
     "/README.md",
     "/LICENSE.md",
