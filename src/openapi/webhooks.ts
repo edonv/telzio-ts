@@ -757,7 +757,7 @@ export interface components {
              *     The list below displays an example of two updated properties, but any property of the call details object can be included in this event.
              *      */
             updated_properties: {
-                [key: string]: string | undefined;
+                [key: string]: string;
             };
         };
         /** @description `call_tagged` event data. */

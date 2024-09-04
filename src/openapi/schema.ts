@@ -6093,7 +6093,7 @@ export interface components {
             message: string;
             /** @description A list of invalid parameters and corresponding error messages. */
             parameters?: {
-                [key: string]: (string[] | null) | undefined;
+                [key: string]: string[] | null;
             } | null;
         };
         /**
@@ -6696,7 +6696,7 @@ export interface components {
         FeaturesPreferenceBundle: {
             /** @description A list of features that are enabled/disabled for the user. */
             enabled_features?: {
-                [key: string]: (boolean | null) | undefined;
+                [key: string]: boolean | null;
             } | null;
         } & (Omit<components["schemas"]["PreferenceBundle"], "type"> & {
             /**
@@ -6880,7 +6880,7 @@ export interface components {
             /** @description Provides more detail to the log, for things like stack traces. */
             full_message?: string | null;
             additional_properties?: {
-                [key: string]: (string | null) | undefined;
+                [key: string]: string | null;
             } | null;
         };
         /** @enum {string} */
@@ -7009,7 +7009,7 @@ export interface components {
             type: components["schemas"]["preference_bundle_type"];
             /** @description A list of fields the user is permitted to edit. This may vary based on the account's settings. */
             editable_fields: {
-                [key: string]: (boolean | null) | undefined;
+                [key: string]: boolean | null;
             };
         };
         PreferenceBundleList: {
@@ -7112,12 +7112,12 @@ export interface components {
             status?: components["schemas"]["QueueCallStatus"];
             /** @description A list of timestamps for when certain events occurred for this call. */
             event_timestamps?: {
-                [key: string]: (string | null) | undefined;
+                [key: string]: string | null;
             } | null;
             /** @description A list of int showing how many seconds the call had a certain status.
              *     This can for example be used to show hold time and current talk time. */
             event_durations?: {
-                [key: string]: (number | null) | undefined;
+                [key: string]: number | null;
             } | null;
             connected_agent?: components["schemas"]["QueueAgent"];
         };
@@ -7362,7 +7362,7 @@ export interface components {
         SoundsPreferenceBundle: {
             /** @description A list of sounds the user has chosen on their device. */
             sounds: {
-                [key: string]: (string | null) | undefined;
+                [key: string]: string | null;
             };
         } & (Omit<components["schemas"]["PreferenceBundle"], "type"> & {
             /**
