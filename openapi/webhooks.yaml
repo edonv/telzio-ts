@@ -164,7 +164,7 @@ components:
         - call_updated
         - call_tagged
 
-        - call_flow_updated
+        - call_flow_entered
     CallDirection:
       type: string
       enum: 

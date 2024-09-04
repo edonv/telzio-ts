@@ -427,7 +427,7 @@ export interface webhooks {
 export interface components {
     schemas: {
         /** @enum {string} */
-        WebhookEventType: "call_created" | "call_ended" | "call_hungup" | "call_status_changed" | "child_call_connected" | "child_call_created" | "call_recording_ready" | "sms_processed" | "voicemail_received" | "attended_transfer" | "blind_transfer" | "fax_received" | "call_updated" | "call_tagged" | "call_flow_updated";
+        WebhookEventType: "call_created" | "call_ended" | "call_hungup" | "call_status_changed" | "child_call_connected" | "child_call_created" | "call_recording_ready" | "sms_processed" | "voicemail_received" | "attended_transfer" | "blind_transfer" | "fax_received" | "call_updated" | "call_tagged" | "call_flow_entered";
         /** @enum {string} */
         CallDirection: "inbound" | "outbound";
         CallStatusType: "initializing" | "ringing" | "in-progress" | "cancel" | "noanswer" | "completed";
