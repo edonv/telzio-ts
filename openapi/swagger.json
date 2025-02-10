@@ -89,7 +89,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -140,7 +140,7 @@
         "description": "Refreshes the user's initial provisioning data, including basic account information and data about available numbers.",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -196,7 +196,7 @@
         "description": "Generates a one time use set of parameters needed to create a SIP Connection and WebRTC Session",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -290,7 +290,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -367,7 +367,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -448,7 +448,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -511,7 +511,7 @@
                   "user_id": {
                     "type": "string",
                     "description": "The unique ID for the user updating the password.",
-                    "example": "usr_5pOkGnXqPzoK"
+                    "example": "usr_eqVDwaQgPbXv"
                   },
                   "token": {
                     "type": "string",
@@ -539,7 +539,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -590,7 +590,7 @@
         "description": "Retrieves a list of all call flows if the user is an administrator or has permissions to manage call flows.",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -654,7 +654,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "flo_alpDrRXRD6Gb"
+              "example": "flo_alpDrYJNk6Gb"
             }
           }
         ],
@@ -687,7 +687,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -746,13 +746,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "flo_zo4PAj2bk97E"
+              "example": "flo_gwZP4vgyDn6o"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -811,7 +811,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -904,7 +904,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -982,7 +982,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "com_zdVPyvQGkgvx"
+              "example": "com_5pOkGEel8zoK"
             }
           },
           {
@@ -990,7 +990,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "com_oaVDNqm3kRGp"
+              "example": "com_QypkdVrqL8nY"
             }
           },
           {
@@ -1003,7 +1003,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1093,7 +1093,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1162,7 +1162,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "com_pWw8O2WzDV12"
+              "example": "com_yZG8nYVdD239"
             }
           }
         ],
@@ -1194,7 +1194,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1261,13 +1261,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "com_wQX8MzdnzPVd"
+              "example": "com_6Jl81BdlPrbV"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1340,7 +1340,7 @@
                   "number_id": {
                     "type": "string",
                     "description": "Number ID this message should be sent from. The user must have access to this number.",
-                    "example": "num_bG58KV4QDYlz"
+                    "example": "num_dy9D7WgWEDzv"
                   }
                 }
               },
@@ -1357,7 +1357,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1418,7 +1418,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_bG58KVnJDYlz"
+              "example": "cnv_jxEPmMz0P9WJ"
             }
           }
         ],
@@ -1446,7 +1446,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1535,7 +1535,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1596,13 +1596,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_0MW8YRgzPn15"
+              "example": "cnv_bG58KyRQkYlz"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1661,7 +1661,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_zdVPyjBLkgvx"
+              "example": "cnv_y2MkJXOm8BoW"
             }
           }
         ],
@@ -1678,18 +1678,18 @@
                     },
                     "description": "Change the tags assigned to the conversation.",
                     "example": [
-                      "tag_RJVDpg4okx5j"
+                      "tag_jXmDLO5NkgGZ"
                     ]
                   },
                   "assigned_user": {
                     "type": "string",
                     "description": "Reassign the conversation to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usr_Aq1kXgOEPrJ7"
+                    "example": "usr_jXmDLEdeZ8gG"
                   },
                   "assigned_user_group": {
                     "type": "string",
                     "description": "Reassign the conversation to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usg_alpDrm7Jk6Gb"
+                    "example": "usg_oaVDNjAbDRGp"
                   },
                   "status": {
                     "$ref": "#/components/schemas/ConversationStatusOptions"
@@ -1721,7 +1721,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1780,13 +1780,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_Aq1kXRml8rJ7"
+              "example": "cnv_6BAD6p3xPd92"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1847,7 +1847,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_4mpDqbAl8RaQ"
+              "example": "cnv_y2MkJM6JPBoW"
             }
           },
           {
@@ -1856,13 +1856,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "msg_yZG8nBRO8239"
+              "example": "msg_y2MkJZNmkBoW"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1923,7 +1923,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_Ry18l0jg8G5V"
+              "example": "cnv_pWw8OJNMADV1"
             }
           },
           {
@@ -1954,7 +1954,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2014,21 +2014,22 @@
               "schema": {
                 "required": [
                   "number_id",
-                  "recipient"
+                  "recipient",
+                  "text"
                 ],
                 "type": "object",
                 "properties": {
                   "number_id": {
                     "type": "string",
                     "description": "Number ID to send message from. Will be users default number if not specified.\r\nOnly used if creating a new conversation.",
-                    "example": "num_alpDrXXJP6Gb"
+                    "example": "num_vaKDxvjnPB4G"
                   },
                   "recipient": {
                     "type": "string",
                     "description": "Phone Number of recipient."
                   },
                   "text": {
-                    "maxLength": 2048,
+                    "maxLength": 750,
                     "type": "string",
                     "description": "The text to send. This can be null if media is added.",
                     "example": "Oh, and tell Cookie Monster not to phone me until he finishes rehab."
@@ -2061,7 +2062,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2122,7 +2123,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_B5Kk5jmRxDzN"
+              "example": "cnv_Aq1kX3MnPrJ7"
             }
           }
         ],
@@ -2160,7 +2161,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2260,7 +2261,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2321,7 +2322,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_zdVPyxRG8gvx"
+              "example": "cnv_lXMk97nma8d0"
             }
           },
           {
@@ -2330,7 +2331,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "msg_MxJD32p7kNro"
+              "example": "msg_RJVDpL02Dx5j"
             }
           },
           {
@@ -2339,13 +2340,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "mms_pWNkZZQVk7Bq"
+              "example": "mms_B5Kk5jmvwDzN"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2402,7 +2403,7 @@
         "description": "Lists the data retention settings for all data types on the account.",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2491,7 +2492,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2561,7 +2562,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "fax_wOWDexMzk15a"
+              "example": "fax_zdVPy11zoPgv"
             }
           },
           {
@@ -2569,7 +2570,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "fax_lXMk9EROkd0Y"
+              "example": "fax_7z48o6bjD6qQ"
             }
           },
           {
@@ -2581,7 +2582,7 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "example": "tag_5pOkGqvxd8zo"
+              "example": "tag_wQX8MM2B8Vd9"
             }
           },
           {
@@ -2597,7 +2598,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2658,13 +2659,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "fax_jXmDLrQ5PgGZ"
+              "example": "fax_wQX8MzO1nPVd"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2723,7 +2724,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "fax_pQq8bgvePMxN"
+              "example": "fax_dy9D7aozPzvJ"
             }
           }
         ],
@@ -2743,18 +2744,18 @@
                     },
                     "description": "Change the tags assigned to the voicemail.",
                     "example": [
-                      "tag_AzlD0Mx18nbV"
+                      "tag_jxEPmWagD9WJ"
                     ]
                   },
                   "assigned_user": {
                     "type": "string",
                     "description": "Reassign the voicemail to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usr_alpDr4ZVP6Gb"
+                    "example": "usr_lXMk97xQO8d0"
                   },
                   "assigned_user_group": {
                     "type": "string",
                     "description": "Reassign the voicemail to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usg_5pOkGVVqPzoK"
+                    "example": "usg_Wb2DzwAoX83j"
                   }
                 }
               },
@@ -2777,7 +2778,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2836,13 +2837,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "fax_pWw8Ooyy8V12"
+              "example": "fax_dy9D7WbEbDzv"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2903,13 +2904,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "fax_Aq1kX6rn8rJ7"
+              "example": "fax_JEbPBl9pDYrV"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/pdf": {
                 "schema": {
@@ -2975,7 +2976,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3091,7 +3092,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3152,13 +3153,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "moh_5pOkGeYb8zoK"
+              "example": "moh_QypkdV6G58nY"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3217,13 +3218,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "moh_eqVDwwAADbXv"
+              "example": "moh_AV98VqQyDlYd"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3284,7 +3285,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "moh_yZG8nVBz8239"
+              "example": "moh_jxEPmYqGP9WJ"
             }
           },
           {
@@ -3298,7 +3299,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "audio/wav": {
                 "schema": {
@@ -3376,7 +3377,7 @@
         "description": "Returns all effective and upcoming policies in their most recent version.",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3453,7 +3454,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3530,7 +3531,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3626,7 +3627,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3677,7 +3678,7 @@
         "description": "Lists all preference bundles for the user.",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3760,7 +3761,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3845,7 +3846,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3920,7 +3921,7 @@
         "description": "Retrieves a list of queues the current user has access to. If the user is an administrator or has permissions to manage queues, then this will return all queues. Otherwise, it will only return the queues the user is an agent of.",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3981,13 +3982,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "que_wQX8Mp3zDVd9"
+              "example": "que_Q3KkjWgoDeqd"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4048,7 +4049,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "que_EWdkW7VNkMw6"
+              "example": "que_Wb2Dzj4KD3j7"
             }
           },
           {
@@ -4057,7 +4058,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_Y6G82E9vDwNp"
+              "example": "usr_MGVkg6g1PwNn"
             }
           }
         ],
@@ -4093,7 +4094,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4154,7 +4155,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_y2MkJBynkBoW"
+              "example": "usr_y2MkJ2rQkBoW"
             }
           }
         ],
@@ -4183,7 +4184,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4254,7 +4255,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "rec_gGzkaXBdRPKO"
+              "example": "rec_4mpDq557pDRa"
             }
           },
           {
@@ -4262,7 +4263,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "rec_7z48oXVMeP6q"
+              "example": "rec_gwZP4JKZDn6o"
             }
           },
           {
@@ -4284,13 +4285,13 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "example": "tag_7z48oA1ek6qQ"
+              "example": "tag_pQq8bwjBPMxN"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4352,13 +4353,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "rec_y2MkJ7RZDBoW"
+              "example": "rec_alpDrw0J86Gb"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4418,7 +4419,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "rec_7z48oAX5k6qQ"
+              "example": "rec_zdVPyp5L8gvx"
             }
           }
         ],
@@ -4438,18 +4439,18 @@
                     },
                     "description": "Change the tags assigned to the recording",
                     "example": [
-                      "tag_MxJD3wwmDNro"
+                      "tag_4mpDq5j5BDRa"
                     ]
                   },
                   "assigned_user": {
                     "type": "string",
                     "description": "Reassign the recording to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usr_gwZP4ABAkn6o"
+                    "example": "usr_Qypkda9LDnYV"
                   },
                   "assigned_user_group": {
                     "type": "string",
                     "description": "Reassign the recording to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usg_vaKDxWO0kB4G"
+                    "example": "usg_4mpDqVvB8RaQ"
                   }
                 }
               },
@@ -4472,7 +4473,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4532,13 +4533,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "rec_JVBDQGOXPmOw"
+              "example": "rec_AzlD0rj4PnbV"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4600,13 +4601,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "rec_wOWDeALqD15a"
+              "example": "rec_RJVDp3qYkx5j"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "audio/mp3": {
                 "schema": {
@@ -4678,7 +4679,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "sfr_MxJD354mPNro"
+              "example": "sfr_0MW8YmJLm8n1"
             }
           },
           {
@@ -4686,7 +4687,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "sfr_5pOkGWLbkzoK"
+              "example": "sfr_lXMk9lqqPd0Y"
             }
           },
           {
@@ -4698,13 +4699,13 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "example": "num_wOWDeng9815a"
+              "example": "num_lXMk9maOkd0Y"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4765,7 +4766,7 @@
                   "number_id": {
                     "type": "string",
                     "description": "Specify an ID of a number on the account to let the rule apply only to that number.",
-                    "example": "num_JEbPBxKpDYrV"
+                    "example": "num_zdVPyqNGPgvx"
                   }
                 },
                 "discriminator": {
@@ -4789,7 +4790,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4866,13 +4867,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "sfr_bG58KllaPYlz"
+              "example": "sfr_rodkRV5ak2GW"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4947,13 +4948,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "sfr_6Jl81oxekrbV"
+              "example": "sfr_6Jl8159n8rbV"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5014,7 +5015,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "sfr_bG58Kwwa8Ylz"
+              "example": "sfr_Wb2DzZQgD3j7"
             }
           }
         ],
@@ -5027,7 +5028,7 @@
                   "number_id": {
                     "type": "string",
                     "description": "Specify an ID of a number on the account to let the rule apply only to that number.",
-                    "example": "num_7z48o1bKk6qQ"
+                    "example": "num_AV98V796PlYd"
                   }
                 },
                 "discriminator": {
@@ -5051,7 +5052,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5138,7 +5139,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "tag_JEbPBW9NkYrV"
+              "example": "tag_Y6G82GJ1PwNp"
             }
           },
           {
@@ -5146,7 +5147,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "tag_lXMk9rNADd0Y"
+              "example": "tag_5pOkG2gNPzoK"
             }
           },
           {
@@ -5159,7 +5160,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5237,7 +5238,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5298,13 +5299,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "tag_oaVDNY99kRGp"
+              "example": "tag_dy9D7GgADzvJ"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5384,7 +5385,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "tev_oaVDNy49kRGp"
+              "example": "tev_lXMk97npa8d0"
             }
           },
           {
@@ -5392,7 +5393,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "tev_eqVDwj27vkbX"
+              "example": "tev_0AQDEYXbDGqB"
             }
           },
           {
@@ -5405,7 +5406,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5517,7 +5518,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5594,7 +5595,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5655,13 +5656,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_gwZP4dVbPn6o"
+              "example": "usr_Qypkdzxz8nYV"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5732,7 +5733,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "usg_zo4PAEwgP97E"
+              "example": "usg_gwZP4Oox8n6o"
             }
           },
           {
@@ -5740,13 +5741,13 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "usg_Aq1kXvRE8rJ7"
+              "example": "usg_Y6G82VMj58wN"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5807,13 +5808,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usg_yZG8n4A1k239"
+              "example": "usg_0AQDEBpYz8Gq"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5883,7 +5884,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5945,7 +5946,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_wOWDep1qk15a"
+              "example": "usr_vaKDx1jwy8B4"
             }
           },
           {
@@ -5960,7 +5961,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6020,7 +6021,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_pWw8O27ADV12"
+              "example": "usr_lXMk97noA8d0"
             }
           }
         ],
@@ -6070,7 +6071,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6131,13 +6132,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_JVBDQgRWPmOw"
+              "example": "usr_pWNkZxzKg87B"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6198,7 +6199,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_5ZV8vO7dPLMJ"
+              "example": "usr_0MW8YmJ4Y8n1"
             }
           }
         ],
@@ -6260,7 +6261,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6321,7 +6322,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_jXmDLzW0PgGZ"
+              "example": "usr_eqVDwWzxDbXv"
             }
           },
           {
@@ -6335,7 +6336,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "audio/wav": {
                 "schema": {
@@ -6413,7 +6414,7 @@
         "description": "Returns a list of voices that are available for text-to-speech generation.",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6469,7 +6470,7 @@
         "description": "Returns a list of available time zones.",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6530,7 +6531,7 @@
             "description": "The unique ID of the voice used to generate the preview.",
             "schema": {
               "type": "string",
-              "example": "tts_y2MkJ3eZDBoW"
+              "example": "tts_AV98V1VRDlYd"
             }
           },
           {
@@ -6546,7 +6547,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "audio/mpeg": {
                 "schema": {
@@ -6618,7 +6619,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "vm_zdVPyGJGDgvx"
+              "example": "vm_0AQDEBBm08Gq"
             }
           },
           {
@@ -6626,7 +6627,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "vm_5pOkGqN478zo"
+              "example": "vm_jxEPmNwvk9WJ"
             }
           },
           {
@@ -6648,13 +6649,13 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "example": "tag_pQq8b5MvJDMx"
+              "example": "tag_rodkRLRy82GW"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6715,13 +6716,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "vm_Q3KkjWBjDeqd"
+              "example": "vm_JEbPBKerkYrV"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6779,7 +6780,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "vm_vaKDxy0L8B4G"
+              "example": "vm_pQq8baOlDMxN"
             }
           }
         ],
@@ -6799,18 +6800,18 @@
                     },
                     "description": "Change the tags assigned to the voicemail.",
                     "example": [
-                      "tag_oaVDNxRbPRGp"
+                      "tag_AzlD0vR9PnbV"
                     ]
                   },
                   "assigned_user": {
                     "type": "string",
                     "description": "Reassign the voicemail to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usr_JEbPBQ5o8YrV"
+                    "example": "usr_gwZP4R9jDn6o"
                   },
                   "assigned_user_group": {
                     "type": "string",
                     "description": "Reassign the voicemail to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usg_RJVDppbmDx5j"
+                    "example": "usg_JEbPBEXd8YrV"
                   }
                 }
               },
@@ -6833,7 +6834,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6892,13 +6893,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "vm_wQX8M7OzkVd9"
+              "example": "vm_wQX8M5jV8Vd9"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6959,13 +6960,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "vm_gwZP4e7ykn6o"
+              "example": "vm_6Jl81X61DrbV"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "audio/mp3": {
                 "schema": {
@@ -7027,13 +7028,13 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "vm_vaKDxRA9PB4G"
+              "example": "vm_jxEPm04o89WJ"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -7126,7 +7127,7 @@
           "account_id": {
             "type": "string",
             "description": "The unique ID of the Telzio Account.",
-            "example": "acc_lXMk9r36Dd0Y"
+            "example": "acc_jxEPmBgGk9WJ"
           },
           "company_name": {
             "minLength": 1,
@@ -7150,76 +7151,84 @@
         "additionalProperties": false
       },
       "AppendCnamSpamFilterRuleCreateRequest": {
-        "required": [
-          "text"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SpamFilterRuleCreateUpdateRequest"
+          },
+          {
+            "required": [
+              "text"
+            ],
+            "type": "object",
+            "properties": {
+              "text": {
+                "maxLength": 254,
+                "minLength": 1,
+                "type": "string",
+                "description": "The text to update the CNAM value with before showing it to the receiver of the call."
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "text": {
-            "maxLength": 254,
-            "minLength": 1,
-            "type": "string",
-            "description": "The text to update the CNAM value with before showing it to the receiver of the call."
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "AppendSpamFilterRule": {
-        "required": [
-          "text"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SpamFilterRule"
+          },
+          {
+            "required": [
+              "text"
+            ],
+            "type": "object",
+            "properties": {
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "text": {
-            "minLength": 1,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "AssignedUser": {
-        "required": [
-          "user"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Assignment"
+          },
+          {
+            "required": [
+              "user"
+            ],
+            "type": "object",
+            "properties": {
+              "user": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "user": {
-            "$ref": "#/components/schemas/User"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "AssignedUserGroup": {
-        "required": [
-          "user_group"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Assignment"
+          },
+          {
+            "required": [
+              "user_group"
+            ],
+            "type": "object",
+            "properties": {
+              "user_group": {
+                "$ref": "#/components/schemas/UserGroup"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "user_group": {
-            "$ref": "#/components/schemas/UserGroup"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "Assignment": {
         "required": [
@@ -7234,7 +7243,7 @@
           "assignment_id": {
             "type": "string",
             "nullable": true,
-            "example": "asg_rodkRpR4n82G"
+            "example": "asg_yZG8n9z3D239"
           },
           "created": {
             "type": "string",
@@ -7255,50 +7264,54 @@
         }
       },
       "AssignmentConversationItem": {
-        "required": [
-          "assignment"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/ConversationItem"
-          }
-        ],
-        "properties": {
-          "assignment": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/AssignedUser"
-              },
-              {
-                "$ref": "#/components/schemas/AssignedUserGroup"
+          },
+          {
+            "required": [
+              "assignment"
+            ],
+            "type": "object",
+            "properties": {
+              "assignment": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/AssignedUser"
+                  },
+                  {
+                    "$ref": "#/components/schemas/AssignedUserGroup"
+                  }
+                ]
               }
-            ]
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "AssignmentEvent": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/TimelineEvent"
-          }
-        ],
-        "properties": {
-          "assignment": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/AssignedUser"
-              },
-              {
-                "$ref": "#/components/schemas/AssignedUserGroup"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "assignment": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/AssignedUser"
+                  },
+                  {
+                    "$ref": "#/components/schemas/AssignedUserGroup"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "AssignmentList": {
         "required": [
@@ -7381,100 +7394,112 @@
         }
       },
       "AuthenticationRequestBrowser": {
-        "required": [
-          "client_details"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/AuthenticationRequestBase"
+          },
+          {
+            "required": [
+              "client_details"
+            ],
+            "type": "object",
+            "properties": {
+              "client_details": {
+                "$ref": "#/components/schemas/ClientDetailsRequestBrowser"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "client_details": {
-            "$ref": "#/components/schemas/ClientDetailsRequestBrowser"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "AuthenticationRequestCustom": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/AuthenticationRequestBase"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
           }
-        ],
-        "additionalProperties": false
+        ]
       },
       "AuthenticationRequestDesktop": {
-        "required": [
-          "client_details"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/AuthenticationRequestBase"
+          },
+          {
+            "required": [
+              "client_details"
+            ],
+            "type": "object",
+            "properties": {
+              "client_details": {
+                "$ref": "#/components/schemas/ClientDetailsRequestDesktop"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "client_details": {
-            "$ref": "#/components/schemas/ClientDetailsRequestDesktop"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "AuthenticationRequestMobile": {
-        "required": [
-          "client_details",
-          "release_sipis"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/AuthenticationRequestBase"
-          }
-        ],
-        "properties": {
-          "client_details": {
-            "$ref": "#/components/schemas/ClientDetailsRequestMobile"
           },
-          "release_sipis": {
-            "type": "boolean",
-            "description": "When set to true, any SIPIS registration for the user is released.\r\nThis is a temporary fix during migration from SIPIS-based app, to avoid Telzio 5.x.x from crashing when receiving push notifications intended for a SIPIS-based app."
+          {
+            "required": [
+              "client_details",
+              "release_sipis"
+            ],
+            "type": "object",
+            "properties": {
+              "client_details": {
+                "$ref": "#/components/schemas/ClientDetailsRequestMobile"
+              },
+              "release_sipis": {
+                "type": "boolean",
+                "description": "When set to true, any SIPIS registration for the user is released.\r\nThis is a temporary fix during migration from SIPIS-based app, to avoid Telzio 5.x.x from crashing when receiving push notifications intended for a SIPIS-based app."
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "AvailabilityPreferenceBundle": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundle"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "do_not_disturb": {
+                "type": "boolean",
+                "description": "If true, the user has enabled Do Not Disturb and will be receiving any calls."
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "do_not_disturb": {
-            "type": "boolean",
-            "description": "If true, the user has enabled Do Not Disturb and will be receiving any calls."
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "AvailabilityPreferenceBundleUpdateRequest": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundleUpdateRequestBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "do_not_disturb": {
+                "type": "boolean",
+                "description": "If true, the user has enabled Do Not Disturb and will be receiving any calls.",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "do_not_disturb": {
-            "type": "boolean",
-            "description": "If true, the user has enabled Do Not Disturb and will be receiving any calls.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "BadRequestError": {
         "title": "Bad Request",
@@ -7635,19 +7660,19 @@
             "type": "string",
             "description": "The unique ID of a voicemail associated with this call.",
             "nullable": true,
-            "example": "vm_EWdkWw5YkMw6"
+            "example": "vm_0MW8Ye1Y8n15"
           },
           "recording_id": {
             "type": "string",
             "description": "The unique ID of a call recording associated with this call.",
             "nullable": true,
-            "example": "rec_6BAD62LnODd9"
+            "example": "rec_bG58Kdd5pPYl"
           },
           "fax_id": {
             "type": "string",
             "description": "The unique ID of a fax associated with this call.",
             "nullable": true,
-            "example": "fax_Q3KkjaxePeqd"
+            "example": "fax_vaKDxNO9PB4G"
           },
           "tags": {
             "type": "array",
@@ -7713,39 +7738,43 @@
         }
       },
       "CallDestinationCallFlow": {
-        "required": [
-          "call_flow"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/CallDestination"
+          },
+          {
+            "required": [
+              "call_flow"
+            ],
+            "type": "object",
+            "properties": {
+              "call_flow": {
+                "$ref": "#/components/schemas/CallFlow"
+              }
+            },
+            "additionalProperties": false
           }
         ],
-        "properties": {
-          "call_flow": {
-            "$ref": "#/components/schemas/CallFlow"
-          }
-        },
-        "additionalProperties": false,
         "description": "Transfer calls to a call flow."
       },
       "CallDestinationPhoneNumber": {
-        "required": [
-          "phone_number"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/CallDestination"
+          },
+          {
+            "required": [
+              "phone_number"
+            ],
+            "type": "object",
+            "properties": {
+              "phone_number": {
+                "$ref": "#/components/schemas/PhoneNumber"
+              }
+            },
+            "additionalProperties": false
           }
         ],
-        "properties": {
-          "phone_number": {
-            "$ref": "#/components/schemas/PhoneNumber"
-          }
-        },
-        "additionalProperties": false,
         "description": "Transfer calls to an external phone number."
       },
       "CallDestinationType": {
@@ -7759,73 +7788,79 @@
         "type": "string"
       },
       "CallDestinationUser": {
-        "required": [
-          "user"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/CallDestination"
+          },
+          {
+            "required": [
+              "user"
+            ],
+            "type": "object",
+            "properties": {
+              "user": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "additionalProperties": false
           }
         ],
-        "properties": {
-          "user": {
-            "$ref": "#/components/schemas/User"
-          }
-        },
-        "additionalProperties": false,
         "description": "Transfer calls to a user."
       },
       "CallDestinationUserGroup": {
-        "required": [
-          "user_group"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/CallDestination"
+          },
+          {
+            "required": [
+              "user_group"
+            ],
+            "type": "object",
+            "properties": {
+              "user_group": {
+                "$ref": "#/components/schemas/UserGroup"
+              }
+            },
+            "additionalProperties": false
           }
         ],
-        "properties": {
-          "user_group": {
-            "$ref": "#/components/schemas/UserGroup"
-          }
-        },
-        "additionalProperties": false,
         "description": "Transfer calls to a group of users."
       },
       "CallDestinationVoicemail": {
-        "required": [
-          "transcription_enabled"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/CallDestination"
+          },
+          {
+            "required": [
+              "transcription_enabled"
+            ],
+            "type": "object",
+            "properties": {
+              "assignment": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/AssignedUser"
+                  },
+                  {
+                    "$ref": "#/components/schemas/AssignedUserGroup"
+                  }
+                ],
+                "description": "Who new voicemail messages are assigned to.",
+                "nullable": true
+              },
+              "transcription_enabled": {
+                "type": "boolean",
+                "description": "If set to true, Telzio will attempt to transcribe the voicemail messages."
+              },
+              "text_to_speech": {
+                "$ref": "#/components/schemas/TextToSpeech"
+              }
+            },
+            "additionalProperties": false
           }
         ],
-        "properties": {
-          "assignment": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/AssignedUser"
-              },
-              {
-                "$ref": "#/components/schemas/AssignedUserGroup"
-              }
-            ],
-            "description": "Who new voicemail messages are assigned to.",
-            "nullable": true
-          },
-          "transcription_enabled": {
-            "type": "boolean",
-            "description": "If set to true, Telzio will attempt to transcribe the voicemail messages."
-          },
-          "text_to_speech": {
-            "$ref": "#/components/schemas/TextToSpeech"
-          }
-        },
-        "additionalProperties": false,
         "description": "Transfer calls to voicemail."
       },
       "CallDirection": {
@@ -7862,7 +7897,7 @@
           "call_flow_id": {
             "type": "string",
             "description": "The unique ID of the call flow.",
-            "example": "flo_alpDrobN86Gb"
+            "example": "flo_5ZV8vN0V8LMJ"
           },
           "name": {
             "minLength": 1,
@@ -8225,26 +8260,28 @@
         "type": "string"
       },
       "ClosedConversationItem": {
-        "required": [
-          "closed_by",
-          "created"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/ConversationItem"
-          }
-        ],
-        "properties": {
-          "closed_by": {
-            "$ref": "#/components/schemas/User"
           },
-          "created": {
-            "type": "string",
-            "format": "date-time"
+          {
+            "required": [
+              "closed_by",
+              "created"
+            ],
+            "type": "object",
+            "properties": {
+              "closed_by": {
+                "$ref": "#/components/schemas/User"
+              },
+              "created": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Comment": {
         "required": [
@@ -8258,7 +8295,7 @@
           "comment_id": {
             "type": "string",
             "description": "The unique ID of the comment.",
-            "example": "com_pWw8OanjkV12"
+            "example": "com_MGVkgyeQ8wNn"
           },
           "text": {
             "minLength": 1,
@@ -8279,35 +8316,39 @@
         "additionalProperties": false
       },
       "CommentConversationItem": {
-        "required": [
-          "comment"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/ConversationItem"
+          },
+          {
+            "required": [
+              "comment"
+            ],
+            "type": "object",
+            "properties": {
+              "comment": {
+                "$ref": "#/components/schemas/Comment"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "comment": {
-            "$ref": "#/components/schemas/Comment"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "CommentEvent": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/TimelineEvent"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "comment": {
+                "$ref": "#/components/schemas/Comment"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "comment": {
-            "$ref": "#/components/schemas/Comment"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "CommentList": {
         "type": "object",
@@ -8340,7 +8381,7 @@
         "properties": {
           "conversation_id": {
             "type": "string",
-            "example": "cnv_pWw8OJJyjDV1"
+            "example": "cnv_dy9D74wm8zvJ"
           },
           "status": {
             "$ref": "#/components/schemas/ConversationStatus"
@@ -8412,11 +8453,11 @@
           },
           "oldest_message_id": {
             "type": "string",
-            "example": "msg_6Jl81YG18rbV"
+            "example": "msg_4mpDqj6r8RaQ"
           },
           "latest_message_id": {
             "type": "string",
-            "example": "msg_rodkRBZbk2GW"
+            "example": "msg_JVBDQjKx8mOw"
           },
           "assignments": {
             "type": "array",
@@ -8444,22 +8485,23 @@
         "description": "A conversation is a chronologically ordered thread of items that all share the same context, for example `call`, `sms`, `voicemail`, `recording`, etc.\r\nCurrently, a conversation can only contain `Sms` items, but this schema is designed for the next generation of Telzio's dashboard and apps, which will be focused around an omnichannel conversation concept.\r\nA conversation is always assigned to either a specific `user` or a `user_group`."
       },
       "ConversationAccessRequest": {
-        "required": [
-          "conversation_id"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/AccessRequest"
+          },
+          {
+            "required": [
+              "conversation_id"
+            ],
+            "type": "object",
+            "properties": {
+              "conversation_id": {
+                "$ref": "#/components/schemas/SmsConversationIdent"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "conversation_id": {
-            "type": "string",
-            "example": "cnv_eqVDwrmxkbXv"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "ConversationIdent": {
         "type": "object",
@@ -8561,7 +8603,7 @@
           },
           "oldest_message_id": {
             "type": "string",
-            "example": "msg_5pOkGqp1q8zo"
+            "example": "msg_Y6G822Ev8wNp"
           }
         },
         "additionalProperties": false
@@ -8634,25 +8676,32 @@
         "type": "string"
       },
       "CustomerIoConfiguration": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/ResourceConfiguration"
-          }
-        ],
-        "properties": {
-          "site_id": {
-            "type": "string",
-            "description": "The customer io site_id",
-            "nullable": true
           },
-          "api_key": {
-            "type": "string",
-            "description": "The customer io api_key",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "site_id": {
+                "type": "string",
+                "description": "The customer io site_id",
+                "nullable": true
+              },
+              "api_key": {
+                "type": "string",
+                "description": "The customer io api_key",
+                "nullable": true
+              },
+              "cdp_api_key": {
+                "type": "string",
+                "description": "The customer io cdp api_key for react native input",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "DataRetentionSetting": {
         "required": [
@@ -8714,7 +8763,7 @@
           "fax_id": {
             "type": "string",
             "description": "The unique ID of the fax.",
-            "example": "fax_pQq8bJgZ8MxN"
+            "example": "fax_AV98VZ2z8lYd"
           },
           "call_id": {
             "minLength": 1,
@@ -8812,7 +8861,7 @@
           "fax_id": {
             "type": "string",
             "description": "The unique ID of the fax.",
-            "example": "fax_0MW8Y13Y8n15"
+            "example": "fax_zo4PAlawX897"
           },
           "call_id": {
             "minLength": 1,
@@ -8913,21 +8962,23 @@
         "additionalProperties": false
       },
       "FeatureCodeCallerType": {
-        "required": [
-          "feature_code"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Caller"
+          },
+          {
+            "required": [
+              "feature_code"
+            ],
+            "type": "object",
+            "properties": {
+              "feature_code": {
+                "$ref": "#/components/schemas/FeatureCode"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "feature_code": {
-            "$ref": "#/components/schemas/FeatureCode"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "FeatureCodeType": {
         "enum": [
@@ -8939,40 +8990,46 @@
         "type": "string"
       },
       "FeaturesPreferenceBundle": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundle"
-          }
-        ],
-        "properties": {
-          "enabled_features": {
+          },
+          {
             "type": "object",
-            "additionalProperties": {
-              "type": "boolean",
-              "nullable": true
+            "properties": {
+              "enabled_features": {
+                "type": "object",
+                "properties": {
+                  "web_phone": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false,
+                "description": "A list of features that are enabled/disabled for the user.",
+                "nullable": true
+              }
             },
-            "description": "A list of features that are enabled/disabled for the user.",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "FeaturesPreferenceBundleUpdateRequest": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundleUpdateRequestBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "web_phone": {
+                "type": "boolean",
+                "description": "Enable or disable the web phone.",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "web_phone": {
-            "type": "boolean",
-            "description": "Enable or disable the web phone.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "ForbiddenError": {
         "title": "Forbidden",
@@ -9021,7 +9078,7 @@
           "hold_music_id": {
             "type": "string",
             "description": "The unique ID for the song.",
-            "example": "moh_7z48oENNk6qQ"
+            "example": "moh_MGVkgwnqwkwN"
           },
           "title": {
             "type": "string",
@@ -9053,21 +9110,23 @@
         "additionalProperties": false
       },
       "ImConversionItem": {
-        "required": [
-          "im_message"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/ConversationItem"
+          },
+          {
+            "required": [
+              "im_message"
+            ],
+            "type": "object",
+            "properties": {
+              "im_message": {
+                "$ref": "#/components/schemas/ImMessage"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "im_message": {
-            "$ref": "#/components/schemas/ImMessage"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "ImMessage": {
         "required": [
@@ -9081,7 +9140,7 @@
         "properties": {
           "chat_message_id": {
             "type": "string",
-            "example": "msg_jXmDLzjYPgGZ"
+            "example": "msg_EWdkWxpXDMw6"
           },
           "created": {
             "type": "string",
@@ -9217,38 +9276,42 @@
         }
       },
       "LogCreateRequestDesktop": {
-        "required": [
-          "client_details"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/LogCreateRequest"
+          },
+          {
+            "required": [
+              "client_details"
+            ],
+            "type": "object",
+            "properties": {
+              "client_details": {
+                "$ref": "#/components/schemas/ClientDetailsRequestDesktop"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "client_details": {
-            "$ref": "#/components/schemas/ClientDetailsRequestDesktop"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "LogCreateRequestMobile": {
-        "required": [
-          "client_details"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/LogCreateRequest"
+          },
+          {
+            "required": [
+              "client_details"
+            ],
+            "type": "object",
+            "properties": {
+              "client_details": {
+                "$ref": "#/components/schemas/ClientDetailsRequestMobile"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "client_details": {
-            "$ref": "#/components/schemas/ClientDetailsRequestMobile"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "LogEntry": {
         "required": [
@@ -9297,7 +9360,7 @@
             "type": "string",
             "description": "For entries related to voicemails",
             "nullable": true,
-            "example": "vm_eqVDwxzv8bXv"
+            "example": "vm_pQq8b55eBDMx"
           },
           "recording_id": {
             "type": "string",
@@ -9360,7 +9423,7 @@
           "number_id": {
             "type": "string",
             "description": "The unique ID for this number.",
-            "example": "num_B5Kk53nw8zNe"
+            "example": "num_pWw8OJ53vDV1"
           },
           "number_type": {
             "$ref": "#/components/schemas/NumberType"
@@ -9412,76 +9475,84 @@
         "type": "string"
       },
       "OverrideCnamSpamFilterRuleCreateRequest": {
-        "required": [
-          "text"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SpamFilterRuleCreateUpdateRequest"
+          },
+          {
+            "required": [
+              "text"
+            ],
+            "type": "object",
+            "properties": {
+              "text": {
+                "maxLength": 254,
+                "minLength": 1,
+                "type": "string",
+                "description": "The text to update the CNAM value with before showing it to the receiver of the call."
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "text": {
-            "maxLength": 254,
-            "minLength": 1,
-            "type": "string",
-            "description": "The text to update the CNAM value with before showing it to the receiver of the call."
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "OverrideSpamFilterRule": {
-        "required": [
-          "text"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SpamFilterRule"
+          },
+          {
+            "required": [
+              "text"
+            ],
+            "type": "object",
+            "properties": {
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "text": {
-            "minLength": 1,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "PasswordPreferenceBundle": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundle"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
           }
-        ],
-        "additionalProperties": false
+        ]
       },
       "PasswordPreferenceBundleUpdateRequest": {
-        "required": [
-          "current_password",
-          "new_password"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundleUpdateRequestBase"
-          }
-        ],
-        "properties": {
-          "current_password": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The user's current password."
           },
-          "new_password": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The user's new password"
+          {
+            "required": [
+              "current_password",
+              "new_password"
+            ],
+            "type": "object",
+            "properties": {
+              "current_password": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The user's current password."
+              },
+              "new_password": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The user's new password"
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "PhoneNumber": {
         "type": "object",
@@ -9532,38 +9603,42 @@
         "additionalProperties": false
       },
       "PhoneNumberCallerType": {
-        "required": [
-          "phone_number"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Caller"
+          },
+          {
+            "required": [
+              "phone_number"
+            ],
+            "type": "object",
+            "properties": {
+              "phone_number": {
+                "$ref": "#/components/schemas/PhoneNumber"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "phone_number": {
-            "$ref": "#/components/schemas/PhoneNumber"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "PhoneNumberParticipant": {
-        "required": [
-          "phone_number"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/ConversationParticipant"
+          },
+          {
+            "required": [
+              "phone_number"
+            ],
+            "type": "object",
+            "properties": {
+              "phone_number": {
+                "$ref": "#/components/schemas/PhoneNumber"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "phone_number": {
-            "$ref": "#/components/schemas/PhoneNumber"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "PreferenceBundle": {
         "required": [
@@ -9578,8 +9653,7 @@
           "editable_fields": {
             "type": "object",
             "additionalProperties": {
-              "type": "boolean",
-              "nullable": true
+              "type": "boolean"
             },
             "description": "A list of fields the user is permitted to edit. This may vary based on the account's settings."
           }
@@ -9653,42 +9727,46 @@
         }
       },
       "PrependCnamSpamFilterRuleCreateRequest": {
-        "required": [
-          "text"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SpamFilterRuleCreateUpdateRequest"
+          },
+          {
+            "required": [
+              "text"
+            ],
+            "type": "object",
+            "properties": {
+              "text": {
+                "maxLength": 254,
+                "minLength": 1,
+                "type": "string",
+                "description": "The text to update the CNAM value with before showing it to the receiver of the call."
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "text": {
-            "maxLength": 254,
-            "minLength": 1,
-            "type": "string",
-            "description": "The text to update the CNAM value with before showing it to the receiver of the call."
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "PrependSpamFilterRule": {
-        "required": [
-          "text"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SpamFilterRule"
+          },
+          {
+            "required": [
+              "text"
+            ],
+            "type": "object",
+            "properties": {
+              "text": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "text": {
-            "minLength": 1,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "Provision": {
         "required": [
@@ -9708,7 +9786,7 @@
             "minLength": 1,
             "type": "string",
             "description": "A unique ID representing the device. This will remain the same when when logging out of the app and signing back in with a different username.",
-            "example": "dv_dy9D7QZbPzvJ"
+            "example": "dv_gwZP4pVLPn6o"
           },
           "claims_token": {
             "type": "string",
@@ -9789,7 +9867,7 @@
           },
           "conversation_id": {
             "type": "string",
-            "example": "cnv_pWw8OyKAkV12"
+            "example": "cnv_pWw8OMnvkV12"
           },
           "current_owner": {
             "oneOf": [
@@ -9824,7 +9902,7 @@
           "queue_id": {
             "type": "string",
             "description": "The unique ID of the queue.",
-            "example": "que_jxEPmymeP9WJ"
+            "example": "que_gwZP4dJLPn6o"
           },
           "name": {
             "minLength": 1,
@@ -9910,21 +9988,81 @@
           },
           "event_timestamps": {
             "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "format": "date-time",
-              "nullable": true
+            "properties": {
+              "waiting": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "connected": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "completed": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "timeout": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "abandoned": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "no_agents": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "error": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "kicked": {
+                "type": "string",
+                "format": "date-time"
+              }
             },
+            "additionalProperties": false,
             "description": "A list of timestamps for when certain events occurred for this call.",
             "nullable": true
           },
           "event_durations": {
             "type": "object",
-            "additionalProperties": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
+            "properties": {
+              "waiting": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "connected": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "completed": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "timeout": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "abandoned": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "no_agents": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "error": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "kicked": {
+                "type": "integer",
+                "format": "int32"
+              }
             },
+            "additionalProperties": false,
             "description": "A list of int showing how many seconds the call had a certain status.\r\nThis can for example be used to show hold time and current talk time.",
             "nullable": true
           },
@@ -10073,7 +10211,7 @@
           "number_id": {
             "type": "string",
             "description": "The telzio number_id that for inbound calls was called, or for outbound calls was called from.",
-            "example": "num_y2MkJ3G4DBoW"
+            "example": "num_4mpDqvxE8RaQ"
           },
           "date": {
             "type": "string",
@@ -10127,7 +10265,7 @@
           "recording_id": {
             "type": "string",
             "description": "The unique ID of the recording.",
-            "example": "rec_0MW8YeNR8n15"
+            "example": "rec_dy9D7Wg7wDzv"
           },
           "call_id": {
             "minLength": 1,
@@ -10277,22 +10415,26 @@
         "additionalProperties": false
       },
       "RejectSpamFilterRule": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SpamFilterRule"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
           }
-        ],
-        "additionalProperties": false
+        ]
       },
       "RejectSpamFilterRuleCreateUpdateRequest": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SpamFilterRuleCreateUpdateRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
           }
-        ],
-        "additionalProperties": false
+        ]
       },
       "ResourceConfiguration": {
         "required": [
@@ -10328,11 +10470,11 @@
         "properties": {
           "conversation_id": {
             "type": "string",
-            "example": "cnv_6Jl81NB6PrbV"
+            "example": "cnv_zo4PA2mbk97E"
           },
           "sms_id": {
             "type": "string",
-            "example": "msg_Wb2DzJdjD3j7"
+            "example": "msg_gwZP4zbADn6o"
           },
           "text": {
             "type": "string",
@@ -10414,11 +10556,11 @@
           "sms_media_id": {
             "type": "string",
             "description": "The unique ID associated with this SMS media.",
-            "example": "mms_5ZV8vy3dDLMJ"
+            "example": "mms_eqVDwjA0akbX"
           },
           "sms_id": {
             "type": "string",
-            "example": "msg_lXMk9GeA8d0Y"
+            "example": "msg_6Jl81dnNDrbV"
           },
           "status": {
             "$ref": "#/components/schemas/SMSMediaStatus"
@@ -10508,21 +10650,23 @@
         "additionalProperties": false
       },
       "SmsConversationItem": {
-        "required": [
-          "sms"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/ConversationItem"
+          },
+          {
+            "required": [
+              "sms"
+            ],
+            "type": "object",
+            "properties": {
+              "sms": {
+                "$ref": "#/components/schemas/SMS"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "sms": {
-            "$ref": "#/components/schemas/SMS"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "SmsMessageIdent": {
         "type": "object",
@@ -10542,73 +10686,94 @@
         "type": "string"
       },
       "SoundsPreferenceBundle": {
-        "required": [
-          "sounds"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundle"
-          }
-        ],
-        "properties": {
-          "sounds": {
+          },
+          {
+            "required": [
+              "sounds"
+            ],
             "type": "object",
-            "additionalProperties": {
-              "type": "string",
-              "nullable": true
+            "properties": {
+              "sounds": {
+                "type": "object",
+                "properties": {
+                  "ringtone": {
+                    "type": "string"
+                  },
+                  "new_sms": {
+                    "type": "string"
+                  },
+                  "new_voicemail": {
+                    "type": "string"
+                  },
+                  "new_fax": {
+                    "type": "string"
+                  },
+                  "new_assignment": {
+                    "type": "string"
+                  },
+                  "notifications": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false,
+                "description": "A list of sounds the user has chosen on their device."
+              }
             },
-            "description": "A list of sounds the user has chosen on their device."
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SoundsPreferenceBundleUpdateRequest": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundleUpdateRequestBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ringtone": {
+                "maxLength": 255,
+                "type": "string",
+                "description": "The filename of the sound to play when new calls come in.",
+                "nullable": true
+              },
+              "new_sms": {
+                "maxLength": 255,
+                "type": "string",
+                "description": "The filename of the sound to play when a new SMS arrives.",
+                "nullable": true
+              },
+              "new_voicemail": {
+                "maxLength": 255,
+                "type": "string",
+                "description": "The filename of the sound to play when new voicemail arrives.",
+                "nullable": true
+              },
+              "new_fax": {
+                "maxLength": 255,
+                "type": "string",
+                "description": "The filename of the sound to play when a new fax arrived.",
+                "nullable": true
+              },
+              "new_assignment": {
+                "maxLength": 255,
+                "type": "string",
+                "description": "The filename of the sound to play when someone is assigned to yourself.",
+                "nullable": true
+              },
+              "notifications": {
+                "maxLength": 255,
+                "type": "string",
+                "description": "The filename of the sound to play when other notifications occur in the app.",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "ringtone": {
-            "maxLength": 255,
-            "type": "string",
-            "description": "The filename of the sound to play when new calls come in.",
-            "nullable": true
-          },
-          "new_sms": {
-            "maxLength": 255,
-            "type": "string",
-            "description": "The filename of the sound to play when a new SMS arrives.",
-            "nullable": true
-          },
-          "new_voicemail": {
-            "maxLength": 255,
-            "type": "string",
-            "description": "The filename of the sound to play when new voicemail arrives.",
-            "nullable": true
-          },
-          "new_fax": {
-            "maxLength": 255,
-            "type": "string",
-            "description": "The filename of the sound to play when a new fax arrived.",
-            "nullable": true
-          },
-          "new_assignment": {
-            "maxLength": 255,
-            "type": "string",
-            "description": "The filename of the sound to play when someone is assigned to yourself.",
-            "nullable": true
-          },
-          "notifications": {
-            "maxLength": 255,
-            "type": "string",
-            "description": "The filename of the sound to play when other notifications occur in the app.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "SpamFilterRule": {
         "required": [
@@ -10626,7 +10791,7 @@
           "spam_filter_rule_id": {
             "type": "string",
             "description": "The unique ID for the spam filter rule.",
-            "example": "sfr_yZG8nRq28239"
+            "example": "sfr_zdVPydl48gvx"
           },
           "threshold": {
             "maximum": 100,
@@ -10665,7 +10830,7 @@
             "type": "string",
             "description": "Specify an ID of a number on the account to let the rule apply only to that number.",
             "nullable": true,
-            "example": "num_Q3Kkj45mo8eq"
+            "example": "num_zo4PA6Agk97E"
           }
         },
         "additionalProperties": false,
@@ -10723,7 +10888,7 @@
           "tag_id": {
             "type": "string",
             "description": "The unique ID for the tag.",
-            "example": "tag_oaVDNv6MDRGp"
+            "example": "tag_jxEPmOJeD9WJ"
           },
           "name": {
             "minLength": 1,
@@ -10738,33 +10903,35 @@
         "additionalProperties": false
       },
       "TagConversationItem": {
-        "required": [
-          "created",
-          "created_by",
-          "tags"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/ConversationItem"
-          }
-        ],
-        "properties": {
-          "tags": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Tag"
-            }
           },
-          "created_by": {
-            "$ref": "#/components/schemas/User"
-          },
-          "created": {
-            "type": "string",
-            "format": "date-time"
+          {
+            "required": [
+              "created",
+              "created_by",
+              "tags"
+            ],
+            "type": "object",
+            "properties": {
+              "tags": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Tag"
+                }
+              },
+              "created_by": {
+                "$ref": "#/components/schemas/User"
+              },
+              "created": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "TagList": {
         "type": "object",
@@ -10787,32 +10954,34 @@
         "description": "A list of tags."
       },
       "TagsEvent": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/TimelineEvent"
-          }
-        ],
-        "properties": {
-          "tags": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Tag"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "tags": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Tag"
+                },
+                "description": "The tags assigned to the timeline at this point in time.",
+                "nullable": true
+              },
+              "created": {
+                "type": "string",
+                "description": "When the tags were assigned to the timeline.",
+                "format": "date-time",
+                "nullable": true
+              },
+              "created_by": {
+                "$ref": "#/components/schemas/User"
+              }
             },
-            "description": "The tags assigned to the timeline at this point in time.",
-            "nullable": true
-          },
-          "created": {
-            "type": "string",
-            "description": "When the tags were assigned to the timeline.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "created_by": {
-            "$ref": "#/components/schemas/User"
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "TelzioItem": {
         "type": "object",
@@ -10828,7 +10997,7 @@
           "voice_id": {
             "type": "string",
             "description": "The unique ID of the voice used to generate the greeting.",
-            "example": "tts_dy9D7KNEDzvJ"
+            "example": "tts_gGzkaXV4RPKO"
           },
           "text": {
             "minLength": 1,
@@ -10895,7 +11064,7 @@
           "timeline_event_id": {
             "type": "string",
             "description": "The ID of the timeline the event is associated with.",
-            "example": "tev_AV98VmM6DlYd"
+            "example": "tev_alpDrvZqD6Gb"
           }
         },
         "additionalProperties": false,
@@ -10935,40 +11104,44 @@
         "additionalProperties": false
       },
       "TransferSpamFilterRule": {
-        "required": [
-          "call_flow"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SpamFilterRule"
+          },
+          {
+            "required": [
+              "call_flow"
+            ],
+            "type": "object",
+            "properties": {
+              "call_flow": {
+                "$ref": "#/components/schemas/CallFlow"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "call_flow": {
-            "$ref": "#/components/schemas/CallFlow"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "TransferSpamFilterRuleCreateRequest": {
-        "required": [
-          "call_flow_id"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SpamFilterRuleCreateUpdateRequest"
+          },
+          {
+            "required": [
+              "call_flow_id"
+            ],
+            "type": "object",
+            "properties": {
+              "call_flow_id": {
+                "type": "integer",
+                "description": "The ID of the call flow calls with a spam score higher than the rule's threshold should be transferred to.",
+                "format": "int32"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "call_flow_id": {
-            "type": "string",
-            "description": "The ID of the call flow calls with a spam score higher than the rule's threshold should be transferred to.",
-            "example": "flo_AzlD0QAV8nbV"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "TurnServer": {
         "type": "object",
@@ -11010,90 +11183,94 @@
         "additionalProperties": false
       },
       "UnansweredCallsPreferenceBundle": {
-        "required": [
-          "timeout"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundle"
-          }
-        ],
-        "properties": {
-          "timeout": {
-            "maximum": 600,
-            "minimum": 7,
-            "type": "integer",
-            "description": "The time to ring the user's phone before transferring the call to the destination.",
-            "format": "int32"
           },
-          "destination": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/CallDestinationVoicemail"
-              },
-              {
-                "$ref": "#/components/schemas/CallDestinationUser"
-              },
-              {
-                "$ref": "#/components/schemas/CallDestinationUserGroup"
-              },
-              {
-                "$ref": "#/components/schemas/CallDestinationCallFlow"
-              },
-              {
-                "$ref": "#/components/schemas/CallDestinationPhoneNumber"
-              }
+          {
+            "required": [
+              "timeout"
             ],
-            "description": "The destination calls are directed to. If set to _null_, the call will just keep ringing and eventually hang up when the timeout period is reached.",
-            "nullable": true
+            "type": "object",
+            "properties": {
+              "timeout": {
+                "maximum": 600,
+                "minimum": 7,
+                "type": "integer",
+                "description": "The time to ring the user's phone before transferring the call to the destination.",
+                "format": "int32"
+              },
+              "destination": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/CallDestinationVoicemail"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CallDestinationUser"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CallDestinationUserGroup"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CallDestinationCallFlow"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CallDestinationPhoneNumber"
+                  }
+                ],
+                "description": "The destination calls are directed to. If set to _null_, the call will just keep ringing and eventually hang up when the timeout period is reached.",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "UnansweredCallsPreferenceBundleUpdateRequest": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundleUpdateRequestBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "timeout": {
+                "maximum": 600,
+                "minimum": 7,
+                "type": "integer",
+                "description": "The time to ring the user's phone before transferring the call to the destination.",
+                "format": "int32"
+              },
+              "destination_type": {
+                "$ref": "#/components/schemas/CallDestinationType"
+              },
+              "user_id": {
+                "type": "integer",
+                "description": "Required if `destination_type` is set to `user`.",
+                "format": "int32",
+                "nullable": true
+              },
+              "user_group_id": {
+                "type": "integer",
+                "description": "Required if `destination_type` is set to `user_group`.",
+                "format": "int32",
+                "nullable": true
+              },
+              "call_flow_id": {
+                "type": "integer",
+                "description": "Required if `destination_type` is set to `call_flow`.",
+                "format": "int32",
+                "nullable": true
+              },
+              "phone_number": {
+                "type": "string",
+                "description": "Required if `destination_type` is set to `phone_number`. Must be formatted in E164 with leading \"+\".",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "timeout": {
-            "maximum": 600,
-            "minimum": 7,
-            "type": "integer",
-            "description": "The time to ring the user's phone before transferring the call to the destination.",
-            "format": "int32"
-          },
-          "destination_type": {
-            "$ref": "#/components/schemas/CallDestinationType"
-          },
-          "user_id": {
-            "type": "string",
-            "description": "Required if `destination_type` is set to `user`.",
-            "nullable": true,
-            "example": "usr_RJVDpXZmDx5j"
-          },
-          "user_group_id": {
-            "type": "string",
-            "description": "Required if `destination_type` is set to `user_group`.",
-            "nullable": true,
-            "example": "usg_jXmDLJ67PgGZ"
-          },
-          "call_flow_id": {
-            "type": "string",
-            "description": "Required if `destination_type` is set to `call_flow`.",
-            "nullable": true,
-            "example": "flo_B5Kk53Xw8zNe"
-          },
-          "phone_number": {
-            "type": "string",
-            "description": "Required if `destination_type` is set to `phone_number`. Must be formatted in E164 with leading \"+\".",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "UnauthorizedError": {
         "required": [
@@ -11145,7 +11322,7 @@
           "user_id": {
             "type": "string",
             "description": "The unique ID representing the user.",
-            "example": "usr_zo4PAZQgk97E"
+            "example": "usr_alpDr9NWk6Gb"
           },
           "status": {
             "$ref": "#/components/schemas/UserStatus"
@@ -11265,158 +11442,164 @@
         "type": "string"
       },
       "UserCallerType": {
-        "required": [
-          "user"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Caller"
+          },
+          {
+            "required": [
+              "user"
+            ],
+            "type": "object",
+            "properties": {
+              "user": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "user": {
-            "$ref": "#/components/schemas/User"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "UserDetailsPreferenceBundle": {
-        "required": [
-          "default_number_id",
-          "email",
-          "first_name",
-          "has_avatar",
-          "last_name",
-          "username"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundle"
+          },
+          {
+            "required": [
+              "default_number_id",
+              "email",
+              "first_name",
+              "has_avatar",
+              "last_name",
+              "username"
+            ],
+            "type": "object",
+            "properties": {
+              "username": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The user's username. Can not be changed.",
+                "example": "pgriffin"
+              },
+              "first_name": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The user's first name.",
+                "example": "Peter"
+              },
+              "last_name": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The user's last name.",
+                "example": "Griffin"
+              },
+              "email": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The user's email address.",
+                "example": "pgriffin@pawtucketpatriotale.com"
+              },
+              "extension": {
+                "type": "string",
+                "description": "The user's extension.",
+                "nullable": true,
+                "example": "420"
+              },
+              "has_avatar": {
+                "type": "boolean",
+                "description": "Defines whether or not the user has a custom avatar.",
+                "example": true
+              },
+              "time_zone": {
+                "type": "string",
+                "description": "The user's timezone. Defaults to account's default timezone.",
+                "nullable": true,
+                "example": "America/New_York"
+              },
+              "default_number_id": {
+                "type": "integer",
+                "description": "The default number used when making outbound calls.",
+                "format": "int32"
+              },
+              "hold_music_id": {
+                "type": "integer",
+                "description": "The ID of the hold music for the user, when transferring or putting calls on hold.",
+                "format": "int32",
+                "nullable": true
+              },
+              "voicemail_pin": {
+                "type": "string",
+                "description": "If set, the user will be asked to enter this pin when calling the voicemail box.",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "username": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The user's username. Can not be changed.",
-            "example": "pgriffin"
-          },
-          "first_name": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The user's first name.",
-            "example": "Peter"
-          },
-          "last_name": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The user's last name.",
-            "example": "Griffin"
-          },
-          "email": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The user's email address.",
-            "example": "pgriffin@pawtucketpatriotale.com"
-          },
-          "extension": {
-            "type": "string",
-            "description": "The user's extension.",
-            "nullable": true,
-            "example": "420"
-          },
-          "has_avatar": {
-            "type": "boolean",
-            "description": "Defines whether or not the user has a custom avatar.",
-            "example": true
-          },
-          "time_zone": {
-            "type": "string",
-            "description": "The user's timezone. Defaults to account's default timezone.",
-            "nullable": true,
-            "example": "America/New_York"
-          },
-          "default_number_id": {
-            "type": "string",
-            "description": "The default number used when making outbound calls.",
-            "example": "num_Q3KkjQlLPeqd"
-          },
-          "hold_music_id": {
-            "type": "string",
-            "description": "The ID of the hold music for the user, when transferring or putting calls on hold.",
-            "nullable": true,
-            "example": "moh_pWNkZLKV87Bq"
-          },
-          "voicemail_pin": {
-            "type": "string",
-            "description": "If set, the user will be asked to enter this pin when calling the voicemail box.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "UserDetailsPreferenceBundleUpdateRequest": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/PreferenceBundleUpdateRequestBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "first_name": {
+                "maxLength": 128,
+                "minLength": 1,
+                "type": "string",
+                "description": "The user's first name.",
+                "nullable": true,
+                "example": "Peter"
+              },
+              "last_name": {
+                "maxLength": 128,
+                "minLength": 1,
+                "type": "string",
+                "description": "The user's last name.",
+                "nullable": true,
+                "example": "Griffin"
+              },
+              "email": {
+                "maxLength": 128,
+                "minLength": 1,
+                "type": "string",
+                "description": "The user's email address",
+                "nullable": true,
+                "example": "pgriffin@pawtucketpatriotale.com"
+              },
+              "time_zone": {
+                "maxLength": 128,
+                "minLength": 1,
+                "type": "string",
+                "description": "The user's timezone. Defaults to account's default time zone.\r\nSee /utilities/time_zones for a list of available time zones.",
+                "nullable": true,
+                "example": "America/New_York"
+              },
+              "default_number_id": {
+                "type": "integer",
+                "description": "The default number used when making outbound calls.",
+                "format": "int32",
+                "nullable": true
+              },
+              "hold_music_id": {
+                "type": "integer",
+                "description": "The ID of the hold music for the user, when transferring or putting calls on hold.",
+                "format": "int32",
+                "nullable": true
+              },
+              "voicemail_pin": {
+                "pattern": "^\\d{4}$",
+                "type": "string",
+                "description": "If set, the user will be asked to enter this pin when calling the voicemail box.",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "first_name": {
-            "maxLength": 128,
-            "minLength": 1,
-            "type": "string",
-            "description": "The user's first name.",
-            "nullable": true,
-            "example": "Peter"
-          },
-          "last_name": {
-            "maxLength": 128,
-            "minLength": 1,
-            "type": "string",
-            "description": "The user's last name.",
-            "nullable": true,
-            "example": "Griffin"
-          },
-          "email": {
-            "maxLength": 128,
-            "minLength": 1,
-            "type": "string",
-            "description": "The user's email address",
-            "nullable": true,
-            "example": "pgriffin@pawtucketpatriotale.com"
-          },
-          "time_zone": {
-            "maxLength": 128,
-            "minLength": 1,
-            "type": "string",
-            "description": "The user's timezone. Defaults to account's default time zone.\r\nSee /utilities/time_zones for a list of available time zones.",
-            "nullable": true,
-            "example": "America/New_York"
-          },
-          "default_number_id": {
-            "type": "string",
-            "description": "The default number used when making outbound calls.",
-            "nullable": true,
-            "example": "num_lXMk9Ojq8d0Y"
-          },
-          "hold_music_id": {
-            "type": "string",
-            "description": "The ID of the hold music for the user, when transferring or putting calls on hold.",
-            "nullable": true,
-            "example": "moh_MxJD3yg2lPNr"
-          },
-          "voicemail_pin": {
-            "pattern": "^\\d{4}$",
-            "type": "string",
-            "description": "If set, the user will be asked to enter this pin when calling the voicemail box.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "UserGroup": {
         "required": [
@@ -11428,7 +11611,7 @@
           "user_group_id": {
             "type": "string",
             "description": "The unique ID representing this user group.",
-            "example": "usg_zdVPya37Pgvx"
+            "example": "usg_yZG8nxj0Gk23"
           },
           "group_name": {
             "minLength": 1,
@@ -11462,21 +11645,23 @@
         "additionalProperties": false
       },
       "UserGroupParticipant": {
-        "required": [
-          "group"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/ConversationParticipant"
+          },
+          {
+            "required": [
+              "group"
+            ],
+            "type": "object",
+            "properties": {
+              "group": {
+                "$ref": "#/components/schemas/UserGroup"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "group": {
-            "$ref": "#/components/schemas/UserGroup"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "UserIncludes": {
         "enum": [
@@ -11515,21 +11700,23 @@
         "type": "string"
       },
       "UserParticipant": {
-        "required": [
-          "user"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/ConversationParticipant"
+          },
+          {
+            "required": [
+              "user"
+            ],
+            "type": "object",
+            "properties": {
+              "user": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "user": {
-            "$ref": "#/components/schemas/User"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "UserStatus": {
         "enum": [
@@ -11542,48 +11729,52 @@
         "type": "string"
       },
       "UserVoicemailFileUpdateRequest": {
-        "required": [
-          "file"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/UserVoicemailUpdateRequest"
+          },
+          {
+            "required": [
+              "file"
+            ],
+            "type": "object",
+            "properties": {
+              "file": {
+                "type": "string",
+                "description": "An mp3 or wav file with a max file size of 6mb.",
+                "format": "binary"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "file": {
-            "type": "string",
-            "description": "An mp3 or wav file with a max file size of 6mb.",
-            "format": "binary"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "UserVoicemailTtsUpdateRequest": {
-        "required": [
-          "text"
-        ],
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/UserVoicemailUpdateRequest"
-          }
-        ],
-        "properties": {
-          "voice_id": {
-            "type": "string",
-            "description": "The unique ID of the voice used to generate the greeting.",
-            "example": "tts_pQq8bl1JkMxN"
           },
-          "text": {
-            "maxLength": 3000,
-            "minLength": 1,
-            "type": "string",
-            "description": "The text used when generating the greeting."
+          {
+            "required": [
+              "text"
+            ],
+            "type": "object",
+            "properties": {
+              "voice_id": {
+                "type": "integer",
+                "description": "The unique ID of the voice used to generate the greeting.",
+                "format": "int32"
+              },
+              "text": {
+                "maxLength": 3000,
+                "minLength": 1,
+                "type": "string",
+                "description": "The text used when generating the greeting."
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "UserVoicemailUpdateRequest": {
         "required": [
@@ -11617,7 +11808,7 @@
           "voice_id": {
             "type": "string",
             "description": "The unique ID of the voice.",
-            "example": "tts_bG58KOmq8Ylz"
+            "example": "tts_6Jl81p92eDrb"
           },
           "display_name": {
             "type": "string",
@@ -11668,7 +11859,7 @@
           "voicemail_id": {
             "type": "string",
             "description": "The unique ID of the voicemail.",
-            "example": "vm_6Jl81pRapDrb"
+            "example": "vm_Y6G82VrBd8wN"
           },
           "call_id": {
             "minLength": 1,
