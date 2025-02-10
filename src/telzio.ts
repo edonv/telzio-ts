@@ -68,11 +68,11 @@ export default class Telzio {
                 return route.path == schemaPath
                     && route.method == request.method.toLowerCase();
             });
-        
+
             if (unprotected) {
                 return undefined;
             }
-                
+
             if (this._options.apiKey) {
                 // append API token
                 request.headers.set(
@@ -80,6 +80,7 @@ export default class Telzio {
                     `Bearer ${this._options.apiKey}`
                 );
             }
+
             return request;
         };
         const authMiddleware: Middleware = {
