@@ -14,7 +14,8 @@
     "test": "tsc && node dist/test/telzio.test.js",
     "api-gen": "openapi-typescript",
     "gen-build": "npm run api-gen && npm run build",
-    "publish": "rm -r ./dist ; npm run gen-build && npm publish"
+    "prepublishOnly": "rm -r ./dist ; npm run gen-build",
+    "publish:pkg": "npm publish"
   },
   "main": "dist/telzio.js",
   "types": "dist/telzio.d.ts",
