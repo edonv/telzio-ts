@@ -24,6 +24,9 @@
     "/LICENSE.md",
     "/dist/"
   ],
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "openapi-fetch": "^0.13.4"
   },
