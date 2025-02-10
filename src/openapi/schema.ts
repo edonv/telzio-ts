@@ -48,7 +48,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -112,7 +112,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -178,7 +178,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -256,7 +256,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -314,7 +314,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -390,7 +390,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -459,7 +459,7 @@ export interface paths {
                     "application/x-www-form-urlencoded": {
                         /**
                          * @description The unique ID for the user updating the password.
-                         * @example usr_5pOkGnXqPzoK
+                         * @example usr_eqVDwaQgPbXv
                          */
                         user_id: string;
                         /** @description The temporary token to authenticate the user for a password update request. */
@@ -470,7 +470,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -534,7 +534,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -613,7 +613,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -666,7 +666,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -729,7 +729,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -801,7 +801,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -874,7 +874,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -938,7 +938,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1017,7 +1017,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1071,7 +1071,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1141,14 +1141,14 @@ export interface paths {
                         participants: string[];
                         /**
                          * @description Number ID this message should be sent from. The user must have access to this number.
-                         * @example num_bG58KV4QDYlz
+                         * @example num_dy9D7WgWEDzv
                          */
                         number_id?: string;
                     };
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1223,7 +1223,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1291,7 +1291,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1359,7 +1359,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1417,18 +1417,18 @@ export interface paths {
                         /**
                          * @description Change the tags assigned to the conversation.
                          * @example [
-                         *       "tag_RJVDpg4okx5j"
+                         *       "tag_jXmDLO5NkgGZ"
                          *     ]
                          */
                         tags?: string[];
                         /**
                          * @description Reassign the conversation to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.
-                         * @example usr_Aq1kXgOEPrJ7
+                         * @example usr_jXmDLEdeZ8gG
                          */
                         assigned_user?: string;
                         /**
                          * @description Reassign the conversation to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.
-                         * @example usg_alpDrm7Jk6Gb
+                         * @example usg_oaVDNjAbDRGp
                          */
                         assigned_user_group?: string;
                         status?: components["schemas"]["ConversationStatusOptions"];
@@ -1437,7 +1437,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1490,7 +1490,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1559,7 +1559,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1628,7 +1628,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1700,7 +1700,7 @@ export interface paths {
                         /**
                          * @description Number ID to send message from. Will be users default number if not specified.
                          *     Only used if creating a new conversation.
-                         * @example num_alpDrXXJP6Gb
+                         * @example num_vaKDxvjnPB4G
                          */
                         number_id: string;
                         /** @description Phone Number of recipient. */
@@ -1709,14 +1709,14 @@ export interface paths {
                          * @description The text to send. This can be null if media is added.
                          * @example Oh, and tell Cookie Monster not to phone me until he finishes rehab.
                          */
-                        text?: string;
+                        text: string;
                         /** @description List of ID's of the previously uploaded media files to attached with the message. */
                         media_attachments?: string[];
                     };
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1796,7 +1796,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1879,7 +1879,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -1947,7 +1947,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2013,7 +2013,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2093,7 +2093,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2163,7 +2163,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2231,7 +2231,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2290,25 +2290,25 @@ export interface paths {
                         /**
                          * @description Change the tags assigned to the voicemail.
                          * @example [
-                         *       "tag_AzlD0Mx18nbV"
+                         *       "tag_jxEPmWagD9WJ"
                          *     ]
                          */
                         tags?: string[];
                         /**
                          * @description Reassign the voicemail to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.
-                         * @example usr_alpDr4ZVP6Gb
+                         * @example usr_lXMk97xQO8d0
                          */
                         assigned_user?: string;
                         /**
                          * @description Reassign the voicemail to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.
-                         * @example usg_5pOkGVVqPzoK
+                         * @example usg_Wb2DzwAoX83j
                          */
                         assigned_user_group?: string;
                     };
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2361,7 +2361,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2426,7 +2426,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2494,7 +2494,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2567,7 +2567,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2633,7 +2633,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2688,7 +2688,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2756,7 +2756,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2826,7 +2826,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2897,7 +2897,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -2970,7 +2970,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3052,7 +3052,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3116,7 +3116,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3171,7 +3171,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3237,7 +3237,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3303,7 +3303,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3371,7 +3371,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3454,7 +3454,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3529,7 +3529,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3599,7 +3599,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3668,7 +3668,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3728,25 +3728,25 @@ export interface paths {
                         /**
                          * @description Change the tags assigned to the recording
                          * @example [
-                         *       "tag_MxJD3wwmDNro"
+                         *       "tag_4mpDq5j5BDRa"
                          *     ]
                          */
                         tags?: string[];
                         /**
                          * @description Reassign the recording to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.
-                         * @example usr_gwZP4ABAkn6o
+                         * @example usr_Qypkda9LDnYV
                          */
                         assigned_user?: string;
                         /**
                          * @description Reassign the recording to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.
-                         * @example usg_vaKDxWO0kB4G
+                         * @example usg_4mpDqVvB8RaQ
                          */
                         assigned_user_group?: string;
                     };
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3800,7 +3800,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3866,7 +3866,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3937,7 +3937,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -3992,14 +3992,14 @@ export interface paths {
                     "application/x-www-form-urlencoded": {
                         /**
                          * @description Specify an ID of a number on the account to let the rule apply only to that number.
-                         * @example num_JEbPBxKpDYrV
+                         * @example num_zdVPyqNGPgvx
                          */
                         number_id?: string;
                     };
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4065,7 +4065,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4120,7 +4120,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4190,14 +4190,14 @@ export interface paths {
                     "application/x-www-form-urlencoded": {
                         /**
                          * @description Specify an ID of a number on the account to let the rule apply only to that number.
-                         * @example num_7z48o1bKk6qQ
+                         * @example num_AV98V796PlYd
                          */
                         number_id?: string;
                     };
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4266,7 +4266,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4325,7 +4325,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4394,7 +4394,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4468,7 +4468,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4547,7 +4547,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4618,7 +4618,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4686,7 +4686,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4756,7 +4756,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4824,7 +4824,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4895,7 +4895,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -4970,7 +4970,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5041,7 +5041,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5095,7 +5095,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5174,7 +5174,7 @@ export interface paths {
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5243,7 +5243,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5313,7 +5313,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5379,7 +5379,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5450,7 +5450,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5522,7 +5522,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5590,7 +5590,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5646,25 +5646,25 @@ export interface paths {
                         /**
                          * @description Change the tags assigned to the voicemail.
                          * @example [
-                         *       "tag_oaVDNxRbPRGp"
+                         *       "tag_AzlD0vR9PnbV"
                          *     ]
                          */
                         tags?: string[];
                         /**
                          * @description Reassign the voicemail to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.
-                         * @example usr_JEbPBQ5o8YrV
+                         * @example usr_gwZP4R9jDn6o
                          */
                         assigned_user?: string;
                         /**
                          * @description Reassign the voicemail to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.
-                         * @example usg_RJVDppbmDx5j
+                         * @example usg_JEbPBEXd8YrV
                          */
                         assigned_user_group?: string;
                     };
                 };
             };
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5717,7 +5717,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5782,7 +5782,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5850,7 +5850,7 @@ export interface paths {
             };
             requestBody?: never;
             responses: {
-                /** @description Success */
+                /** @description OK */
                 200: {
                     headers: {
                         [name: string]: unknown;
@@ -5910,7 +5910,7 @@ export interface components {
         Account: {
             /**
              * @description The unique ID of the Telzio Account.
-             * @example acc_lXMk9r36Dd0Y
+             * @example acc_jxEPmBgGk9WJ
              */
             account_id: string;
             /**
@@ -5930,69 +5930,69 @@ export interface components {
              */
             default_timezone: string;
         };
-        AppendCnamSpamFilterRuleCreateRequest: {
+        AppendCnamSpamFilterRuleCreateRequest: Omit<components["schemas"]["SpamFilterRuleCreateUpdateRequest"], "action_type"> & {
             /** @description The text to update the CNAM value with before showing it to the receiver of the call. */
             text: string;
-        } & (Omit<components["schemas"]["SpamFilterRuleCreateUpdateRequest"], "action_type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             action_type: "append_cnam";
-        });
-        AppendSpamFilterRule: {
+        };
+        AppendSpamFilterRule: Omit<components["schemas"]["SpamFilterRule"], "action"> & {
             text: string;
-        } & (Omit<components["schemas"]["SpamFilterRule"], "action"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             action: "append";
-        });
-        AssignedUser: {
+        };
+        AssignedUser: Omit<components["schemas"]["Assignment"], "type"> & {
             user: components["schemas"]["User"];
-        } & (Omit<components["schemas"]["Assignment"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "user";
-        });
-        AssignedUserGroup: {
+        };
+        AssignedUserGroup: Omit<components["schemas"]["Assignment"], "type"> & {
             user_group: components["schemas"]["UserGroup"];
-        } & (Omit<components["schemas"]["Assignment"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "user_group";
-        });
+        };
         Assignment: {
             type: string;
-            /** @example asg_rodkRpR4n82G */
+            /** @example asg_yZG8n9z3D239 */
             assignment_id?: string | null;
             /** Format: date-time */
             created?: string | null;
             created_by?: components["schemas"]["User"];
         };
-        AssignmentConversationItem: {
+        AssignmentConversationItem: Omit<components["schemas"]["ConversationItem"], "type"> & {
             assignment: components["schemas"]["AssignedUser"] | components["schemas"]["AssignedUserGroup"];
-        } & (Omit<components["schemas"]["ConversationItem"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "assignment";
-        });
-        AssignmentEvent: {
+        };
+        AssignmentEvent: Omit<components["schemas"]["TimelineEvent"], "type"> & {
             assignment?: (components["schemas"]["AssignedUser"] | components["schemas"]["AssignedUserGroup"]) | null;
-        } & (Omit<components["schemas"]["TimelineEvent"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "assignment";
-        });
+        };
         AssignmentList: {
             /** @description A list of objects containing the basic details about each voicemail message. */
             data: (components["schemas"]["AssignedUser"] | components["schemas"]["AssignedUserGroup"])[];
@@ -6023,63 +6023,63 @@ export interface components {
              */
             mfa_code?: string | null;
         };
-        AuthenticationRequestBrowser: {
+        AuthenticationRequestBrowser: Omit<components["schemas"]["AuthenticationRequestBase"], "client_platform"> & {
             client_details: components["schemas"]["ClientDetailsRequestBrowser"];
-        } & (Omit<components["schemas"]["AuthenticationRequestBase"], "client_platform"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             client_platform: "browser";
-        });
-        AuthenticationRequestCustom: Omit<components["schemas"]["AuthenticationRequestBase"], "client_platform"> & {
+        };
+        AuthenticationRequestCustom: Omit<components["schemas"]["AuthenticationRequestBase"], "client_platform"> & Record<string, never> & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             client_platform: "custom";
         };
-        AuthenticationRequestDesktop: {
+        AuthenticationRequestDesktop: Omit<components["schemas"]["AuthenticationRequestBase"], "client_platform"> & {
             client_details: components["schemas"]["ClientDetailsRequestDesktop"];
-        } & (Omit<components["schemas"]["AuthenticationRequestBase"], "client_platform"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             client_platform: "desktop";
-        });
-        AuthenticationRequestMobile: {
+        };
+        AuthenticationRequestMobile: Omit<components["schemas"]["AuthenticationRequestBase"], "client_platform"> & {
             client_details: components["schemas"]["ClientDetailsRequestMobile"];
             /** @description When set to true, any SIPIS registration for the user is released.
              *     This is a temporary fix during migration from SIPIS-based app, to avoid Telzio 5.x.x from crashing when receiving push notifications intended for a SIPIS-based app. */
             release_sipis: boolean;
-        } & (Omit<components["schemas"]["AuthenticationRequestBase"], "client_platform"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             client_platform: "mobile";
-        });
-        AvailabilityPreferenceBundle: {
+        };
+        AvailabilityPreferenceBundle: Omit<components["schemas"]["PreferenceBundle"], "type"> & {
             /** @description If true, the user has enabled Do Not Disturb and will be receiving any calls. */
             do_not_disturb?: boolean;
-        } & (Omit<components["schemas"]["PreferenceBundle"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "availability";
-        });
-        AvailabilityPreferenceBundleUpdateRequest: {
+        };
+        AvailabilityPreferenceBundleUpdateRequest: Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
             /** @description If true, the user has enabled Do Not Disturb and will be receiving any calls. */
             do_not_disturb?: boolean | null;
-        } & (Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "availability";
-        });
+        };
         /**
          * Bad Request
          * @description Describes an error caused by an invalid API request.
@@ -6134,17 +6134,17 @@ export interface components {
             spam_details?: components["schemas"]["CallSpamDetails"];
             /**
              * @description The unique ID of a voicemail associated with this call.
-             * @example vm_EWdkWw5YkMw6
+             * @example vm_0MW8Ye1Y8n15
              */
             voicemail_id?: string | null;
             /**
              * @description The unique ID of a call recording associated with this call.
-             * @example rec_6BAD62LnODd9
+             * @example rec_bG58Kdd5pPYl
              */
             recording_id?: string | null;
             /**
              * @description The unique ID of a fax associated with this call.
-             * @example fax_Q3KkjaxePeqd
+             * @example fax_vaKDxNO9PB4G
              */
             fax_id?: string | null;
             /** @description A list of tags assigned to this call. */
@@ -6180,61 +6180,61 @@ export interface components {
             type: components["schemas"]["CallDestinationType"];
         };
         /** @description Transfer calls to a call flow. */
-        CallDestinationCallFlow: {
+        CallDestinationCallFlow: Omit<components["schemas"]["CallDestination"], "type"> & {
             call_flow: components["schemas"]["CallFlow"];
-        } & (Omit<components["schemas"]["CallDestination"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "call_flow";
-        });
+        };
         /** @description Transfer calls to an external phone number. */
-        CallDestinationPhoneNumber: {
+        CallDestinationPhoneNumber: Omit<components["schemas"]["CallDestination"], "type"> & {
             phone_number: components["schemas"]["PhoneNumber"];
-        } & (Omit<components["schemas"]["CallDestination"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "phone_number";
-        });
+        };
         /** @enum {string} */
         CallDestinationType: "voicemail" | "user" | "user_group" | "call_flow" | "phone_number";
         /** @description Transfer calls to a user. */
-        CallDestinationUser: {
+        CallDestinationUser: Omit<components["schemas"]["CallDestination"], "type"> & {
             user: components["schemas"]["User"];
-        } & (Omit<components["schemas"]["CallDestination"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "user";
-        });
+        };
         /** @description Transfer calls to a group of users. */
-        CallDestinationUserGroup: {
+        CallDestinationUserGroup: Omit<components["schemas"]["CallDestination"], "type"> & {
             user_group: components["schemas"]["UserGroup"];
-        } & (Omit<components["schemas"]["CallDestination"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "user_group";
-        });
+        };
         /** @description Transfer calls to voicemail. */
-        CallDestinationVoicemail: {
+        CallDestinationVoicemail: Omit<components["schemas"]["CallDestination"], "type"> & {
             /** @description Who new voicemail messages are assigned to. */
             assignment?: (components["schemas"]["AssignedUser"] | components["schemas"]["AssignedUserGroup"]) | null;
             /** @description If set to true, Telzio will attempt to transcribe the voicemail messages. */
             transcription_enabled: boolean;
             text_to_speech?: components["schemas"]["TextToSpeech"];
-        } & (Omit<components["schemas"]["CallDestination"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "voicemail";
-        });
+        };
         /** @enum {string} */
         CallDirection: "inbound" | "outbound";
         CallEvent: {
@@ -6249,7 +6249,7 @@ export interface components {
         CallFlow: {
             /**
              * @description The unique ID of the call flow.
-             * @example flo_alpDrobN86Gb
+             * @example flo_5ZV8vN0V8LMJ
              */
             call_flow_id: string;
             /** @description The name of the call flow */
@@ -6430,21 +6430,21 @@ export interface components {
         ClientMobileOS: "ios" | "android";
         /** @enum {string} */
         ClientPlatform: "mobile" | "mobile_upgrade" | "tablet" | "tv" | "desktop" | "browser" | "custom";
-        ClosedConversationItem: {
+        ClosedConversationItem: Omit<components["schemas"]["ConversationItem"], "type"> & {
             closed_by: components["schemas"]["User"];
             /** Format: date-time */
             created: string;
-        } & (Omit<components["schemas"]["ConversationItem"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "closed_conversation";
-        });
+        };
         Comment: {
             /**
              * @description The unique ID of the comment.
-             * @example com_pWw8OanjkV12
+             * @example com_MGVkgyeQ8wNn
              */
             comment_id: string;
             /**
@@ -6460,24 +6460,24 @@ export interface components {
             created: string;
             created_by: components["schemas"]["User"];
         };
-        CommentConversationItem: {
+        CommentConversationItem: Omit<components["schemas"]["ConversationItem"], "type"> & {
             comment: components["schemas"]["Comment"];
-        } & (Omit<components["schemas"]["ConversationItem"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "comment";
-        });
-        CommentEvent: {
+        };
+        CommentEvent: Omit<components["schemas"]["TimelineEvent"], "type"> & {
             comment?: components["schemas"]["Comment"];
-        } & (Omit<components["schemas"]["TimelineEvent"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "comment";
-        });
+        };
         CommentList: {
             data?: components["schemas"]["Comment"][] | null;
             has_more?: boolean;
@@ -6486,7 +6486,7 @@ export interface components {
          *     Currently, a conversation can only contain `Sms` items, but this schema is designed for the next generation of Telzio's dashboard and apps, which will be focused around an omnichannel conversation concept.
          *     A conversation is always assigned to either a specific `user` or a `user_group`. */
         Conversation: {
-            /** @example cnv_pWw8OJJyjDV1 */
+            /** @example cnv_dy9D74wm8zvJ */
             conversation_id?: string;
             status: components["schemas"]["ConversationStatus"];
             /**
@@ -6512,25 +6512,24 @@ export interface components {
             items: (components["schemas"]["SmsConversationItem"] | components["schemas"]["ImConversionItem"] | components["schemas"]["CommentConversationItem"] | components["schemas"]["AssignmentConversationItem"] | components["schemas"]["TagConversationItem"] | components["schemas"]["ClosedConversationItem"])[];
             /** @description Indicates if the conversation has more items that can be retrieved using the List Conversation Items endpoint. */
             has_more_items?: boolean;
-            /** @example msg_6Jl81YG18rbV */
+            /** @example msg_4mpDqj6r8RaQ */
             oldest_message_id?: string;
-            /** @example msg_rodkRBZbk2GW */
+            /** @example msg_JVBDQjKx8mOw */
             latest_message_id?: string;
             /** @description A chronological list of who the conversation has been assigned to over time. */
             assignments: (components["schemas"]["AssignedUser"] | components["schemas"]["AssignedUserGroup"])[];
             /** @description List of current tags on the conversation. */
             tags: components["schemas"]["Tag"][];
         };
-        ConversationAccessRequest: {
-            /** @example cnv_eqVDwrmxkbXv */
-            conversation_id: string;
-        } & (Omit<components["schemas"]["AccessRequest"], "type"> & {
+        ConversationAccessRequest: Omit<components["schemas"]["AccessRequest"], "type"> & {
+            conversation_id: components["schemas"]["SmsConversationIdent"];
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "conversation";
-        });
+        };
         ConversationIdent: Record<string, never>;
         /**
          * Forbidden
@@ -6555,7 +6554,7 @@ export interface components {
             /** @description A list of Conversation Items. */
             data?: (components["schemas"]["SmsConversationItem"] | components["schemas"]["ImConversionItem"] | components["schemas"]["CommentConversationItem"] | components["schemas"]["AssignmentConversationItem"] | components["schemas"]["TagConversationItem"] | components["schemas"]["ClosedConversationItem"])[] | null;
             has_more?: boolean;
-            /** @example msg_5pOkGqp1q8zo */
+            /** @example msg_Y6G822Ev8wNp */
             oldest_message_id?: string;
         };
         /** @description A list of Conversations */
@@ -6582,18 +6581,20 @@ export interface components {
         ConversationStatus: "active" | "closed";
         /** @enum {string} */
         ConversationStatusOptions: "closed";
-        CustomerIoConfiguration: {
+        CustomerIoConfiguration: Omit<components["schemas"]["ResourceConfiguration"], "type"> & {
             /** @description The customer io site_id */
             site_id?: string | null;
             /** @description The customer io api_key */
             api_key?: string | null;
-        } & (Omit<components["schemas"]["ResourceConfiguration"], "type"> & {
+            /** @description The customer io cdp api_key for react native input */
+            cdp_api_key?: string | null;
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "customer_io";
-        });
+        };
         DataRetentionSetting: {
             settingType: components["schemas"]["DataRetentionSettingType"];
             /**
@@ -6611,7 +6612,7 @@ export interface components {
         Fax: {
             /**
              * @description The unique ID of the fax.
-             * @example fax_pQq8bJgZ8MxN
+             * @example fax_AV98VZ2z8lYd
              */
             fax_id: string;
             /**
@@ -6645,7 +6646,7 @@ export interface components {
         FaxListItem: {
             /**
              * @description The unique ID of the fax.
-             * @example fax_0MW8Y13Y8n15
+             * @example fax_zo4PAlawX897
              */
             fax_id: string;
             /**
@@ -6682,39 +6683,39 @@ export interface components {
             raw?: string | null;
             feature_code_type?: components["schemas"]["FeatureCodeType"];
         };
-        FeatureCodeCallerType: {
+        FeatureCodeCallerType: Omit<components["schemas"]["Caller"], "type"> & {
             feature_code: components["schemas"]["FeatureCode"];
-        } & (Omit<components["schemas"]["Caller"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "feature_code";
-        });
+        };
         /** @enum {string} */
         FeatureCodeType: "voicemail" | "queue_menu" | "monitor_call" | "mobile_conference_call";
-        FeaturesPreferenceBundle: {
+        FeaturesPreferenceBundle: Omit<components["schemas"]["PreferenceBundle"], "type"> & {
             /** @description A list of features that are enabled/disabled for the user. */
             enabled_features?: {
-                [key: string]: boolean | null;
+                web_phone?: boolean;
             } | null;
-        } & (Omit<components["schemas"]["PreferenceBundle"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "features";
-        });
-        FeaturesPreferenceBundleUpdateRequest: {
+        };
+        FeaturesPreferenceBundleUpdateRequest: Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
             /** @description Enable or disable the web phone. */
             web_phone?: boolean | null;
-        } & (Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "features";
-        });
+        };
         /**
          * Forbidden
          * @description Describes an error caused by an invalid API request.
@@ -6732,7 +6733,7 @@ export interface components {
         HoldMusic: {
             /**
              * @description The unique ID for the song.
-             * @example moh_7z48oENNk6qQ
+             * @example moh_MGVkgwnqwkwN
              */
             hold_music_id: string;
             /**
@@ -6746,17 +6747,17 @@ export interface components {
             has_more?: boolean;
         };
         HoldMusicListRequest: Record<string, never>;
-        ImConversionItem: {
+        ImConversionItem: Omit<components["schemas"]["ConversationItem"], "type"> & {
             im_message: components["schemas"]["ImMessage"];
-        } & (Omit<components["schemas"]["ConversationItem"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "im_message";
-        });
+        };
         ImMessage: {
-            /** @example msg_jXmDLzjYPgGZ */
+            /** @example msg_EWdkWxpXDMw6 */
             chat_message_id: string;
             /**
              * Format: date-time
@@ -6829,24 +6830,24 @@ export interface components {
              *     etc... */
             entries: components["schemas"]["LogEntry"][];
         };
-        LogCreateRequestDesktop: {
+        LogCreateRequestDesktop: Omit<components["schemas"]["LogCreateRequest"], "client_platform"> & {
             client_details: components["schemas"]["ClientDetailsRequestDesktop"];
-        } & (Omit<components["schemas"]["LogCreateRequest"], "client_platform"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             client_platform: "desktop";
-        });
-        LogCreateRequestMobile: {
+        };
+        LogCreateRequestMobile: Omit<components["schemas"]["LogCreateRequest"], "client_platform"> & {
             client_details: components["schemas"]["ClientDetailsRequestMobile"];
-        } & (Omit<components["schemas"]["LogCreateRequest"], "client_platform"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             client_platform: "mobile";
-        });
+        };
         LogEntry: {
             /**
              * Format: date-time
@@ -6870,7 +6871,7 @@ export interface components {
             sms_id?: string | null;
             /**
              * @description For entries related to voicemails
-             * @example vm_eqVDwxzv8bXv
+             * @example vm_pQq8b55eBDMx
              */
             voicemail_id?: string | null;
             /** @description For entries related to recordings */
@@ -6891,7 +6892,7 @@ export interface components {
         Number: {
             /**
              * @description The unique ID for this number.
-             * @example num_B5Kk53nw8zNe
+             * @example num_pWw8OJ53vDV1
              */
             number_id: string;
             number_type: components["schemas"]["NumberType"];
@@ -6912,44 +6913,44 @@ export interface components {
         NumberStatus: "pending" | "active" | "canceled";
         /** @enum {string} */
         NumberType: "local" | "tollfree";
-        OverrideCnamSpamFilterRuleCreateRequest: {
+        OverrideCnamSpamFilterRuleCreateRequest: Omit<components["schemas"]["SpamFilterRuleCreateUpdateRequest"], "action_type"> & {
             /** @description The text to update the CNAM value with before showing it to the receiver of the call. */
             text: string;
-        } & (Omit<components["schemas"]["SpamFilterRuleCreateUpdateRequest"], "action_type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             action_type: "override_cnam";
-        });
-        OverrideSpamFilterRule: {
+        };
+        OverrideSpamFilterRule: Omit<components["schemas"]["SpamFilterRule"], "action"> & {
             text: string;
-        } & (Omit<components["schemas"]["SpamFilterRule"], "action"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             action: "override";
-        });
-        PasswordPreferenceBundle: Omit<components["schemas"]["PreferenceBundle"], "type"> & {
+        };
+        PasswordPreferenceBundle: Omit<components["schemas"]["PreferenceBundle"], "type"> & Record<string, never> & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "password";
         };
-        PasswordPreferenceBundleUpdateRequest: {
+        PasswordPreferenceBundleUpdateRequest: Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
             /** @description The user's current password. */
             current_password: string;
             /** @description The user's new password */
             new_password: string;
-        } & (Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "password";
-        });
+        };
         PhoneNumber: {
             /**
              * @description The raw unformatted number.
@@ -6987,29 +6988,29 @@ export interface components {
              */
             region?: string | null;
         };
-        PhoneNumberCallerType: {
+        PhoneNumberCallerType: Omit<components["schemas"]["Caller"], "type"> & {
             phone_number: components["schemas"]["PhoneNumber"];
-        } & (Omit<components["schemas"]["Caller"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "phone_number";
-        });
-        PhoneNumberParticipant: {
+        };
+        PhoneNumberParticipant: Omit<components["schemas"]["ConversationParticipant"], "type"> & {
             phone_number: components["schemas"]["PhoneNumber"];
-        } & (Omit<components["schemas"]["ConversationParticipant"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "phone_number";
-        });
+        };
         PreferenceBundle: {
             type: components["schemas"]["preference_bundle_type"];
             /** @description A list of fields the user is permitted to edit. This may vary based on the account's settings. */
             editable_fields: {
-                [key: string]: boolean | null;
+                [key: string]: boolean;
             };
         };
         PreferenceBundleList: {
@@ -7018,29 +7019,29 @@ export interface components {
         PreferenceBundleUpdateRequestBase: {
             type: components["schemas"]["preference_bundle_type"];
         };
-        PrependCnamSpamFilterRuleCreateRequest: {
+        PrependCnamSpamFilterRuleCreateRequest: Omit<components["schemas"]["SpamFilterRuleCreateUpdateRequest"], "action_type"> & {
             /** @description The text to update the CNAM value with before showing it to the receiver of the call. */
             text: string;
-        } & (Omit<components["schemas"]["SpamFilterRuleCreateUpdateRequest"], "action_type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             action_type: "prepend_cnam";
-        });
-        PrependSpamFilterRule: {
+        };
+        PrependSpamFilterRule: Omit<components["schemas"]["SpamFilterRule"], "action"> & {
             text: string;
-        } & (Omit<components["schemas"]["SpamFilterRule"], "action"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             action: "prepend";
-        });
+        };
         Provision: {
             /**
              * @description A unique ID representing the device. This will remain the same when when logging out of the app and signing back in with a different username.
-             * @example dv_dy9D7QZbPzvJ
+             * @example dv_gwZP4pVLPn6o
              */
             device_id: string;
             /**
@@ -7067,7 +7068,7 @@ export interface components {
         };
         QueryConversationResponse: {
             query_result: components["schemas"]["QueryConversationResult"];
-            /** @example cnv_pWw8OyKAkV12 */
+            /** @example cnv_pWw8OMnvkV12 */
             conversation_id?: string;
             /** @description In case query_result is "conversation_exists_no_access", this shows who currently owns the conversation. */
             current_owner?: (components["schemas"]["AssignedUser"] | components["schemas"]["AssignedUserGroup"]) | null;
@@ -7077,7 +7078,7 @@ export interface components {
         Queue: {
             /**
              * @description The unique ID of the queue.
-             * @example que_jxEPmymeP9WJ
+             * @example que_gwZP4dJLPn6o
              */
             queue_id: string;
             /** @description The name of the queue. */
@@ -7112,12 +7113,42 @@ export interface components {
             status?: components["schemas"]["QueueCallStatus"];
             /** @description A list of timestamps for when certain events occurred for this call. */
             event_timestamps?: {
-                [key: string]: string | null;
+                /** Format: date-time */
+                waiting?: string;
+                /** Format: date-time */
+                connected?: string;
+                /** Format: date-time */
+                completed?: string;
+                /** Format: date-time */
+                timeout?: string;
+                /** Format: date-time */
+                abandoned?: string;
+                /** Format: date-time */
+                no_agents?: string;
+                /** Format: date-time */
+                error?: string;
+                /** Format: date-time */
+                kicked?: string;
             } | null;
             /** @description A list of int showing how many seconds the call had a certain status.
              *     This can for example be used to show hold time and current talk time. */
             event_durations?: {
-                [key: string]: number | null;
+                /** Format: int32 */
+                waiting?: number;
+                /** Format: int32 */
+                connected?: number;
+                /** Format: int32 */
+                completed?: number;
+                /** Format: int32 */
+                timeout?: number;
+                /** Format: int32 */
+                abandoned?: number;
+                /** Format: int32 */
+                no_agents?: number;
+                /** Format: int32 */
+                error?: number;
+                /** Format: int32 */
+                kicked?: number;
             } | null;
             connected_agent?: components["schemas"]["QueueAgent"];
         };
@@ -7186,7 +7217,7 @@ export interface components {
             status: components["schemas"]["RecentCallStatus"];
             /**
              * @description The telzio number_id that for inbound calls was called, or for outbound calls was called from.
-             * @example num_y2MkJ3G4DBoW
+             * @example num_4mpDqvxE8RaQ
              */
             number_id: string;
             /**
@@ -7206,7 +7237,7 @@ export interface components {
         Recording: {
             /**
              * @description The unique ID of the recording.
-             * @example rec_0MW8YeNR8n15
+             * @example rec_dy9D7Wg7wDzv
              */
             recording_id: string;
             /** @description The Call ID of the call associated with the recording */
@@ -7251,14 +7282,14 @@ export interface components {
             /** @description List of timeline events created (if any) by this update. */
             data?: (components["schemas"]["CommentEvent"] | components["schemas"]["AssignmentEvent"] | components["schemas"]["TagsEvent"])[] | null;
         };
-        RejectSpamFilterRule: Omit<components["schemas"]["SpamFilterRule"], "action"> & {
+        RejectSpamFilterRule: Omit<components["schemas"]["SpamFilterRule"], "action"> & Record<string, never> & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             action: "reject";
         };
-        RejectSpamFilterRuleCreateUpdateRequest: Omit<components["schemas"]["SpamFilterRuleCreateUpdateRequest"], "action_type"> & {
+        RejectSpamFilterRuleCreateUpdateRequest: Omit<components["schemas"]["SpamFilterRuleCreateUpdateRequest"], "action_type"> & Record<string, never> & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
@@ -7270,9 +7301,9 @@ export interface components {
             type: string;
         };
         SMS: {
-            /** @example cnv_6Jl81NB6PrbV */
+            /** @example cnv_zo4PA2mbk97E */
             conversation_id: string;
-            /** @example msg_Wb2DzJdjD3j7 */
+            /** @example msg_gwZP4zbADn6o */
             sms_id?: string;
             /**
              * @description The text in the SMS. This can be null if the sender only included a picture.
@@ -7300,10 +7331,10 @@ export interface components {
         SMSMedia: {
             /**
              * @description The unique ID associated with this SMS media.
-             * @example mms_5ZV8vy3dDLMJ
+             * @example mms_eqVDwjA0akbX
              */
             sms_media_id: string;
-            /** @example msg_lXMk9GeA8d0Y */
+            /** @example msg_6Jl81dnNDrbV */
             sms_id?: string;
             status: components["schemas"]["SMSMediaStatus"];
             /**
@@ -7344,34 +7375,39 @@ export interface components {
             /** Format: int32 */
             conversationId?: number;
         };
-        SmsConversationItem: {
+        SmsConversationItem: Omit<components["schemas"]["ConversationItem"], "type"> & {
             sms: components["schemas"]["SMS"];
-        } & (Omit<components["schemas"]["ConversationItem"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "sms";
-        });
+        };
         SmsMessageIdent: {
             /** Format: int32 */
             messageId?: number;
         };
         /** @enum {string} */
         SortDirection: "desc" | "asc";
-        SoundsPreferenceBundle: {
+        SoundsPreferenceBundle: Omit<components["schemas"]["PreferenceBundle"], "type"> & {
             /** @description A list of sounds the user has chosen on their device. */
             sounds: {
-                [key: string]: string | null;
+                ringtone?: string;
+                new_sms?: string;
+                new_voicemail?: string;
+                new_fax?: string;
+                new_assignment?: string;
+                notifications?: string;
             };
-        } & (Omit<components["schemas"]["PreferenceBundle"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "sounds";
-        });
-        SoundsPreferenceBundleUpdateRequest: {
+        };
+        SoundsPreferenceBundleUpdateRequest: Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
             /** @description The filename of the sound to play when new calls come in. */
             ringtone?: string | null;
             /** @description The filename of the sound to play when a new SMS arrives. */
@@ -7384,19 +7420,19 @@ export interface components {
             new_assignment?: string | null;
             /** @description The filename of the sound to play when other notifications occur in the app. */
             notifications?: string | null;
-        } & (Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "sounds";
-        });
+        };
         SpamFilterRule: {
             /** @description The type of action taken when an incoming call's spam score is above a rule's threshold. */
             action: string;
             /**
              * @description The unique ID for the spam filter rule.
-             * @example sfr_yZG8nRq28239
+             * @example sfr_zdVPydl48gvx
              */
             spam_filter_rule_id: string;
             /**
@@ -7411,7 +7447,7 @@ export interface components {
             action_type: string;
             /**
              * @description Specify an ID of a number on the account to let the rule apply only to that number.
-             * @example num_Q3Kkj45mo8eq
+             * @example num_zo4PA6Agk97E
              */
             number_id?: string | null;
         };
@@ -7422,7 +7458,7 @@ export interface components {
         Tag: {
             /**
              * @description The unique ID for the tag.
-             * @example tag_oaVDNv6MDRGp
+             * @example tag_jxEPmOJeD9WJ
              */
             tag_id: string;
             /** @description The name of the tag. */
@@ -7430,18 +7466,18 @@ export interface components {
             /** @description Indicates whether or not the tag is usable in Telzio. When deleted, active is set to false. */
             active: boolean;
         };
-        TagConversationItem: {
+        TagConversationItem: Omit<components["schemas"]["ConversationItem"], "type"> & {
             tags: components["schemas"]["Tag"][];
             created_by: components["schemas"]["User"];
             /** Format: date-time */
             created: string;
-        } & (Omit<components["schemas"]["ConversationItem"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "tags";
-        });
+        };
         /** @description A list of tags. */
         TagList: {
             /** @description A list of objects containing the basic details about each voicemail message. */
@@ -7452,7 +7488,7 @@ export interface components {
              */
             has_more?: boolean;
         };
-        TagsEvent: {
+        TagsEvent: Omit<components["schemas"]["TimelineEvent"], "type"> & {
             /** @description The tags assigned to the timeline at this point in time. */
             tags?: components["schemas"]["Tag"][] | null;
             /**
@@ -7461,18 +7497,18 @@ export interface components {
              */
             created?: string | null;
             created_by?: components["schemas"]["User"];
-        } & (Omit<components["schemas"]["TimelineEvent"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "tags";
-        });
+        };
         TelzioItem: Record<string, never>;
         TextToSpeech: {
             /**
              * @description The unique ID of the voice used to generate the greeting.
-             * @example tts_dy9D7KNEDzvJ
+             * @example tts_gGzkaXV4RPKO
              */
             voice_id: string;
             /** @description The text used when generating the greeting. */
@@ -7499,7 +7535,7 @@ export interface components {
             type: string | null;
             /**
              * @description The ID of the timeline the event is associated with.
-             * @example tev_AV98VmM6DlYd
+             * @example tev_alpDrvZqD6Gb
              */
             timeline_event_id?: string;
         };
@@ -7507,28 +7543,28 @@ export interface components {
             data?: (components["schemas"]["CommentEvent"] | components["schemas"]["AssignmentEvent"] | components["schemas"]["TagsEvent"])[] | null;
             has_more?: boolean;
         };
-        TransferSpamFilterRule: {
+        TransferSpamFilterRule: Omit<components["schemas"]["SpamFilterRule"], "action"> & {
             call_flow: components["schemas"]["CallFlow"];
-        } & (Omit<components["schemas"]["SpamFilterRule"], "action"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             action: "transfer";
-        });
-        TransferSpamFilterRuleCreateRequest: {
+        };
+        TransferSpamFilterRuleCreateRequest: Omit<components["schemas"]["SpamFilterRuleCreateUpdateRequest"], "action_type"> & {
             /**
+             * Format: int32
              * @description The ID of the call flow calls with a spam score higher than the rule's threshold should be transferred to.
-             * @example flo_AzlD0QAV8nbV
              */
-            call_flow_id: string;
-        } & (Omit<components["schemas"]["SpamFilterRuleCreateUpdateRequest"], "action_type"> & {
+            call_flow_id: number;
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             action_type: "transfer";
-        });
+        };
         TurnServer: {
             /** @description TURN server urls */
             urls?: string[] | null;
@@ -7542,7 +7578,7 @@ export interface components {
             turn_tls?: components["schemas"]["TurnServer"];
             turn_tls_ga?: components["schemas"]["TurnServer"];
         };
-        UnansweredCallsPreferenceBundle: {
+        UnansweredCallsPreferenceBundle: Omit<components["schemas"]["PreferenceBundle"], "type"> & {
             /**
              * Format: int32
              * @description The time to ring the user's phone before transferring the call to the destination.
@@ -7550,14 +7586,14 @@ export interface components {
             timeout: number;
             /** @description The destination calls are directed to. If set to _null_, the call will just keep ringing and eventually hang up when the timeout period is reached. */
             destination?: (components["schemas"]["CallDestinationVoicemail"] | components["schemas"]["CallDestinationUser"] | components["schemas"]["CallDestinationUserGroup"] | components["schemas"]["CallDestinationCallFlow"] | components["schemas"]["CallDestinationPhoneNumber"]) | null;
-        } & (Omit<components["schemas"]["PreferenceBundle"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "unanswered_calls";
-        });
-        UnansweredCallsPreferenceBundleUpdateRequest: {
+        };
+        UnansweredCallsPreferenceBundleUpdateRequest: Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
             /**
              * Format: int32
              * @description The time to ring the user's phone before transferring the call to the destination.
@@ -7565,29 +7601,29 @@ export interface components {
             timeout?: number;
             destination_type?: components["schemas"]["CallDestinationType"];
             /**
+             * Format: int32
              * @description Required if `destination_type` is set to `user`.
-             * @example usr_RJVDpXZmDx5j
              */
-            user_id?: string | null;
+            user_id?: number | null;
             /**
+             * Format: int32
              * @description Required if `destination_type` is set to `user_group`.
-             * @example usg_jXmDLJ67PgGZ
              */
-            user_group_id?: string | null;
+            user_group_id?: number | null;
             /**
+             * Format: int32
              * @description Required if `destination_type` is set to `call_flow`.
-             * @example flo_B5Kk53Xw8zNe
              */
-            call_flow_id?: string | null;
+            call_flow_id?: number | null;
             /** @description Required if `destination_type` is set to `phone_number`. Must be formatted in E164 with leading "+". */
             phone_number?: string | null;
-        } & (Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "unanswered_calls";
-        });
+        };
         UnauthorizedError: {
             type: components["schemas"]["UnauthorizedErrorType"];
             /**
@@ -7601,7 +7637,7 @@ export interface components {
         User: {
             /**
              * @description The unique ID representing the user.
-             * @example usr_zo4PAZQgk97E
+             * @example usr_alpDr9NWk6Gb
              */
             user_id: string;
             status: components["schemas"]["UserStatus"];
@@ -7659,16 +7695,16 @@ export interface components {
         UserAvailabilityStatus: "offline" | "idle" | "ringing" | "busy" | "dnd";
         /** @enum {string} */
         UserAvatarSize: "small" | "medium" | "large";
-        UserCallerType: {
+        UserCallerType: Omit<components["schemas"]["Caller"], "type"> & {
             user: components["schemas"]["User"];
-        } & (Omit<components["schemas"]["Caller"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "user";
-        });
-        UserDetailsPreferenceBundle: {
+        };
+        UserDetailsPreferenceBundle: Omit<components["schemas"]["PreferenceBundle"], "type"> & {
             /**
              * @description The user's username. Can not be changed.
              * @example pgriffin
@@ -7705,25 +7741,25 @@ export interface components {
              */
             time_zone?: string | null;
             /**
+             * Format: int32
              * @description The default number used when making outbound calls.
-             * @example num_Q3KkjQlLPeqd
              */
-            default_number_id: string;
+            default_number_id: number;
             /**
+             * Format: int32
              * @description The ID of the hold music for the user, when transferring or putting calls on hold.
-             * @example moh_pWNkZLKV87Bq
              */
-            hold_music_id?: string | null;
+            hold_music_id?: number | null;
             /** @description If set, the user will be asked to enter this pin when calling the voicemail box. */
             voicemail_pin?: string | null;
-        } & (Omit<components["schemas"]["PreferenceBundle"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "user_details";
-        });
-        UserDetailsPreferenceBundleUpdateRequest: {
+        };
+        UserDetailsPreferenceBundleUpdateRequest: Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
             /**
              * @description The user's first name.
              * @example Peter
@@ -7746,28 +7782,28 @@ export interface components {
              */
             time_zone?: string | null;
             /**
+             * Format: int32
              * @description The default number used when making outbound calls.
-             * @example num_lXMk9Ojq8d0Y
              */
-            default_number_id?: string | null;
+            default_number_id?: number | null;
             /**
+             * Format: int32
              * @description The ID of the hold music for the user, when transferring or putting calls on hold.
-             * @example moh_MxJD3yg2lPNr
              */
-            hold_music_id?: string | null;
+            hold_music_id?: number | null;
             /** @description If set, the user will be asked to enter this pin when calling the voicemail box. */
             voicemail_pin?: string | null;
-        } & (Omit<components["schemas"]["PreferenceBundleUpdateRequestBase"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "user_details";
-        });
+        };
         UserGroup: {
             /**
              * @description The unique ID representing this user group.
-             * @example usg_zdVPya37Pgvx
+             * @example usg_yZG8nxj0Gk23
              */
             user_group_id: string;
             /**
@@ -7785,15 +7821,15 @@ export interface components {
             data?: components["schemas"]["UserGroup"][] | null;
             has_more?: boolean;
         };
-        UserGroupParticipant: {
+        UserGroupParticipant: Omit<components["schemas"]["ConversationParticipant"], "type"> & {
             group: components["schemas"]["UserGroup"];
-        } & (Omit<components["schemas"]["ConversationParticipant"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "group";
-        });
+        };
         /** @enum {string} */
         UserIncludes: "queue_agents";
         UserList: {
@@ -7805,45 +7841,45 @@ export interface components {
         };
         /** @enum {string} */
         UserListSortOption: "firstname_lastname" | "lastname_firstname" | "username";
-        UserParticipant: {
+        UserParticipant: Omit<components["schemas"]["ConversationParticipant"], "type"> & {
             user: components["schemas"]["User"];
-        } & (Omit<components["schemas"]["ConversationParticipant"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "user";
-        });
+        };
         /** @enum {string} */
         UserStatus: "active" | "deleted" | "suspended" | "disabled" | "unknown";
-        UserVoicemailFileUpdateRequest: {
+        UserVoicemailFileUpdateRequest: Omit<components["schemas"]["UserVoicemailUpdateRequest"], "type"> & {
             /**
              * Format: binary
              * @description An mp3 or wav file with a max file size of 6mb.
              */
             file: string;
-        } & (Omit<components["schemas"]["UserVoicemailUpdateRequest"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "file";
-        });
-        UserVoicemailTtsUpdateRequest: {
+        };
+        UserVoicemailTtsUpdateRequest: Omit<components["schemas"]["UserVoicemailUpdateRequest"], "type"> & {
             /**
+             * Format: int32
              * @description The unique ID of the voice used to generate the greeting.
-             * @example tts_pQq8bl1JkMxN
              */
-            voice_id?: string;
+            voice_id?: number;
             /** @description The text used when generating the greeting. */
             text: string;
-        } & (Omit<components["schemas"]["UserVoicemailUpdateRequest"], "type"> & {
+        } & {
             /**
              * @description discriminator enum property added by openapi-typescript
              * @enum {string}
              */
             type: "text_to_speech";
-        });
+        };
         UserVoicemailUpdateRequest: {
             /** @description The type of caller */
             type: string;
@@ -7851,7 +7887,7 @@ export interface components {
         Voice: {
             /**
              * @description The unique ID of the voice.
-             * @example tts_bG58KOmq8Ylz
+             * @example tts_6Jl81p92eDrb
              */
             voice_id: string;
             /** @description Human readably display name for this language and gender combination. */
@@ -7868,7 +7904,7 @@ export interface components {
         Voicemail: {
             /**
              * @description The unique ID of the voicemail.
-             * @example vm_6Jl81pRapDrb
+             * @example vm_Y6G82VrBd8wN
              */
             voicemail_id: string;
             /** @description The Call ID of the call associated with the voicemail */
