@@ -7,6 +7,7 @@ info:
   version: v3
   description: |
     ## General
+
     When configuring your webhook you have two choices of format: `JSON` or `x-www-form-urlencoded`.
 
     The consuming API has 15 seconds to accept the event. If a success http status code has not been returned with these 15 seconds, the event will be discarded and the engine will proceed to the next one.
@@ -18,6 +19,9 @@ info:
     The Telzio webhook supports authenticating against the customer API using either a, by the customer specified, Bearer Token or Basic Authentication. In both cases the customer enters either the token or credentials for basic auth on the Telzio website.
 
     ## Authentication
+
+    The Telzio webhook supports authenticating against the customer API using either a, by the customer specified, Bearer Token or Basic Authentication. In both cases the customer enters either the token or credentials for basic auth on the Telzio website.
+
     In case of Bearer token authentication, the engine will issue all HTTP Requests with the following Header: `Authorization: Bearer`
 
     In case of Basic Authentication it will be as follows: `Authorization: Basic`
