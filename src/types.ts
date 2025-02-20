@@ -12,3 +12,19 @@ export interface components {
     headers: webhookComponents['headers'],
     pathItems: webhookComponents['pathItems'],
 }
+
+export type WebhookEventBody = webhookComponents['schemas']['CallCreatedBody']
+    | webhookComponents['schemas']['CallEndedBody']
+    | webhookComponents['schemas']['CallHungUpBody']
+    | webhookComponents['schemas']['CallStatusChangedBody']
+    | webhookComponents['schemas']['ChildCallConnectedBody']
+    | webhookComponents['schemas']['ChildCallCreatedBody']
+    | webhookComponents['schemas']['RecordingReadyBody']
+    | webhookComponents['schemas']['SMSSentReceivedBody']
+    | webhookComponents['schemas']['VoicemailReceivedBody']
+    | webhookComponents['schemas']['AttendedTransferBody']
+    | webhookComponents['schemas']['BlindTransferBody']
+    | webhookComponents['schemas']['FaxReceivedBody']
+    | webhookComponents['schemas']['CallUpdatedBody']
+    | webhookComponents['schemas']['CallTaggedBody']
+    | webhookComponents['schemas']['CallFlowEnteredBody'];
