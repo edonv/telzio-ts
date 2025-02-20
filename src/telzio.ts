@@ -47,12 +47,14 @@ export interface TelzioOptions {
     apiKey?: string,
 }
 
+type TelzioClient = ReturnType<typeof wrapAsPathBasedClient<paths>>;
+
 export default class Telzio {
     private static readonly _baseUrl = 'https://api.telzio.com';
 
     private _options: TelzioOptions;
     private _unprotectedRoutes: UnprotectedRoute[];
-    readonly client: ReturnType<typeof wrapAsPathBasedClient<paths>>;
+    readonly client: TelzioClient;
 
     constructor(options: TelzioOptions = {}) {
         this._options = options;
