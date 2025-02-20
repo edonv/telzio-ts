@@ -4,8 +4,11 @@
   "type": "module",
   "license": "MIT",
   "description": "Node package for Telzio API v3.",
-  "repository": "github:edonv/telzio-ts",
   "author": "edonv",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edonv/telzio-ts.git"
+  },
   "sponsor": {
     "url": "https://github.com/sponsors/edonv"
   },
