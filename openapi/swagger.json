@@ -1,8 +1,8 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "Telzio API",
-    "description": "Telzio's next generation API to power dashboard, mobile and desktop apps.",
+    "description": "Telzio's public API, which also powers our mobile app and next-generation dashboard.",
     "termsOfService": "https://telzio.com/legal/terms",
     "contact": {
       "name": "Telzio, Inc.",
@@ -53,7 +53,7 @@
                   "mfa_code": {
                     "maxLength": 6,
                     "type": "string",
-                    "description": "The MFA code for the user's login session. Required if multi-factor authentication is enabled on the user's account.\r\nIf MFA is enabled and this property is not included in the request, the API will reject the login and ask for an MFA code.",
+                    "description": "The MFA code for the user's login session. Required if multi-factor authentication is enabled on the user's account.\nIf MFA is enabled and this property is not included in the request, the API will reject the login and ask for an MFA code.",
                     "example": "123456"
                   },
                   "client_platform": {
@@ -420,7 +420,7 @@
           "Authentication"
         ],
         "summary": "Reset Password",
-        "description": "Request a password reset link to be sent to the user's email. Will always return 200 OK, no matter if a matching username was found or not.\r\nIf the username was found, this method will send an email with a link that includes a token to reset the user's password. This token can be used in the update-password method.",
+        "description": "Request a password reset link to be sent to the user's email. Will always return 200 OK, no matter if a matching username was found or not.\nIf the username was found, this method will send an email with a link that includes a token to reset the user's password. This token can be used in the update-password method.",
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -511,7 +511,7 @@
                   "user_id": {
                     "type": "string",
                     "description": "The unique ID for the user updating the password.",
-                    "example": "usr_eqVDwaQgPbXv"
+                    "example": "usr_wQX8M2anPVd9"
                   },
                   "token": {
                     "type": "string",
@@ -654,7 +654,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "flo_alpDrYJNk6Gb"
+              "example": "flo_5pOkGlnmDzoK"
             }
           }
         ],
@@ -746,7 +746,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "flo_gwZP4vgyDn6o"
+              "example": "flo_6BAD6wWx8d92"
             }
           }
         ],
@@ -982,7 +982,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "com_5pOkGEel8zoK"
+              "example": "com_4mpDqd4OkRaQ"
             }
           },
           {
@@ -990,7 +990,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "com_QypkdVrqL8nY"
+              "example": "com_bG58Ko5a8Ylz"
             }
           },
           {
@@ -1162,7 +1162,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "com_yZG8nYVdD239"
+              "example": "com_0MW8YmmYY8n1"
             }
           }
         ],
@@ -1261,7 +1261,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "com_6Jl81BdlPrbV"
+              "example": "com_gwZP4Myxkn6o"
             }
           }
         ],
@@ -1340,7 +1340,7 @@
                   "number_id": {
                     "type": "string",
                     "description": "Number ID this message should be sent from. The user must have access to this number.",
-                    "example": "num_dy9D7WgWEDzv"
+                    "example": "num_6Jl81qY28rbV"
                   }
                 }
               },
@@ -1418,7 +1418,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_jxEPmMz0P9WJ"
+              "example": "cnv_0AQDE44ykGqB"
             }
           }
         ],
@@ -1596,7 +1596,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_bG58KyRQkYlz"
+              "example": "cnv_JVBDQrBL8mOw"
             }
           }
         ],
@@ -1661,7 +1661,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_y2MkJXOm8BoW"
+              "example": "cnv_Q3KkjjV6keqd"
             }
           }
         ],
@@ -1678,18 +1678,18 @@
                     },
                     "description": "Change the tags assigned to the conversation.",
                     "example": [
-                      "tag_jXmDLO5NkgGZ"
+                      "tag_dy9D7aV4PzvJ"
                     ]
                   },
                   "assigned_user": {
                     "type": "string",
                     "description": "Reassign the conversation to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usr_jXmDLEdeZ8gG"
+                    "example": "usr_vaKDxJ2nPB4G"
                   },
                   "assigned_user_group": {
                     "type": "string",
                     "description": "Reassign the conversation to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usg_oaVDNjAbDRGp"
+                    "example": "usg_wOWDey0dD15a"
                   },
                   "status": {
                     "$ref": "#/components/schemas/ConversationStatusOptions"
@@ -1780,7 +1780,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_6BAD6p3xPd92"
+              "example": "cnv_pQq8bVNx8MxN"
             }
           }
         ],
@@ -1847,7 +1847,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_y2MkJM6JPBoW"
+              "example": "cnv_zdVPy0e48gvx"
             }
           },
           {
@@ -1856,7 +1856,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "msg_y2MkJZNmkBoW"
+              "example": "msg_0AQDEXxbkGqB"
             }
           }
         ],
@@ -1923,7 +1923,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_pWw8OJNMADV1"
+              "example": "cnv_wOWDebBq815a"
             }
           },
           {
@@ -2021,8 +2021,8 @@
                 "properties": {
                   "number_id": {
                     "type": "string",
-                    "description": "Number ID to send message from. Will be users default number if not specified.\r\nOnly used if creating a new conversation.",
-                    "example": "num_vaKDxvjnPB4G"
+                    "description": "Number ID to send message from. Will be users default number if not specified.\nOnly used if creating a new conversation.",
+                    "example": "num_0MW8YQE08n15"
                   },
                   "recipient": {
                     "type": "string",
@@ -2123,7 +2123,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_Aq1kX3MnPrJ7"
+              "example": "cnv_zo4PAxy2897E"
             }
           }
         ],
@@ -2322,7 +2322,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "cnv_lXMk97nma8d0"
+              "example": "cnv_zdVPyQAGPgvx"
             }
           },
           {
@@ -2331,7 +2331,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "msg_RJVDpL02Dx5j"
+              "example": "msg_gwZP4AJZkn6o"
             }
           },
           {
@@ -2340,7 +2340,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "mms_B5Kk5jmvwDzN"
+              "example": "mms_wQX8M2BzPVd9"
             }
           }
         ],
@@ -2562,7 +2562,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "fax_zdVPy11zoPgv"
+              "example": "fax_4mpDq53nrDRa"
             }
           },
           {
@@ -2570,7 +2570,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "fax_7z48o6bjD6qQ"
+              "example": "fax_oaVDN7E18RGp"
             }
           },
           {
@@ -2582,7 +2582,7 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "example": "tag_wQX8MM2B8Vd9"
+              "example": "tag_6Jl81XX2DrbV"
             }
           },
           {
@@ -2659,7 +2659,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "fax_wQX8MzO1nPVd"
+              "example": "fax_pWw8OJJ7yDV1"
             }
           }
         ],
@@ -2724,7 +2724,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "fax_dy9D7aozPzvJ"
+              "example": "fax_wOWDejO5815a"
             }
           }
         ],
@@ -2744,18 +2744,18 @@
                     },
                     "description": "Change the tags assigned to the voicemail.",
                     "example": [
-                      "tag_jxEPmWagD9WJ"
+                      "tag_AV98VOnvPlYd"
                     ]
                   },
                   "assigned_user": {
                     "type": "string",
                     "description": "Reassign the voicemail to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usr_lXMk97xQO8d0"
+                    "example": "usr_Wb2DzKEo83j7"
                   },
                   "assigned_user_group": {
                     "type": "string",
                     "description": "Reassign the voicemail to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usg_Wb2DzwAoX83j"
+                    "example": "usg_5ZV8v4qVkLMJ"
                   }
                 }
               },
@@ -2837,7 +2837,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "fax_dy9D7WbEbDzv"
+              "example": "fax_EWdkW9bQ8Mw6"
             }
           }
         ],
@@ -2904,7 +2904,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "fax_JEbPBl9pDYrV"
+              "example": "fax_4mpDqgypPRaQ"
             }
           }
         ],
@@ -3153,7 +3153,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "moh_QypkdV6G58nY"
+              "example": "moh_yZG8njjp8239"
             }
           }
         ],
@@ -3218,7 +3218,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "moh_AV98VqQyDlYd"
+              "example": "moh_eqVDwjov5kbX"
             }
           }
         ],
@@ -3285,7 +3285,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "moh_jxEPmYqGP9WJ"
+              "example": "moh_zdVPy7M5Dgvx"
             }
           },
           {
@@ -3603,7 +3603,7 @@
                     "items": {
                       "$ref": "#/components/schemas/LogEntry"
                     },
-                    "description": "A list of entries to submit to the log.\r\nYou can submit up to 100 entries per request by specifying them in a collection this way;\r\nentries[0][created]\r\nentries[0][message]\r\nentries[0][severity]\r\nentries[1][created]\r\nentries[2][message]\r\nentries[3][severity]\r\netc..."
+                    "description": "A list of entries to submit to the log.\nYou can submit up to 100 entries per request by specifying them in a collection this way;\nentries[0][created]\nentries[0][message]\nentries[0][severity]\nentries[1][created]\nentries[2][message]\nentries[3][severity]\netc..."
                   }
                 },
                 "discriminator": {
@@ -3982,7 +3982,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "que_Q3KkjWgoDeqd"
+              "example": "que_wQX8M0BKDVd9"
             }
           }
         ],
@@ -4049,7 +4049,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "que_Wb2Dzj4KD3j7"
+              "example": "que_jXmDLK55kgGZ"
             }
           },
           {
@@ -4058,7 +4058,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_MGVkg6g1PwNn"
+              "example": "usr_jxEPmYmWP9WJ"
             }
           }
         ],
@@ -4155,7 +4155,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_y2MkJ2rQkBoW"
+              "example": "usr_jXmDL4ppDgGZ"
             }
           }
         ],
@@ -4255,7 +4255,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "rec_4mpDq557pDRa"
+              "example": "rec_Y6G82o9yPwNp"
             }
           },
           {
@@ -4263,7 +4263,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "rec_gwZP4JKZDn6o"
+              "example": "rec_EWdkWbLXPMw6"
             }
           },
           {
@@ -4285,7 +4285,7 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "example": "tag_pQq8bwjBPMxN"
+              "example": "tag_dy9D7ORKDzvJ"
             }
           }
         ],
@@ -4353,7 +4353,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "rec_alpDrw0J86Gb"
+              "example": "rec_wOWDeXNpwk15"
             }
           }
         ],
@@ -4419,7 +4419,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "rec_zdVPyp5L8gvx"
+              "example": "rec_RJVDpMQb8x5j"
             }
           }
         ],
@@ -4439,18 +4439,18 @@
                     },
                     "description": "Change the tags assigned to the recording",
                     "example": [
-                      "tag_4mpDq5j5BDRa"
+                      "tag_4mpDqYpxDRaQ"
                     ]
                   },
                   "assigned_user": {
                     "type": "string",
                     "description": "Reassign the recording to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usr_Qypkda9LDnYV"
+                    "example": "usr_5ZV8v9qdDLMJ"
                   },
                   "assigned_user_group": {
                     "type": "string",
                     "description": "Reassign the recording to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usg_4mpDqVvB8RaQ"
+                    "example": "usg_jXmDLJYpPgGZ"
                   }
                 }
               },
@@ -4533,7 +4533,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "rec_AzlD0rj4PnbV"
+              "example": "rec_dy9D75QmPzvJ"
             }
           }
         ],
@@ -4601,7 +4601,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "rec_RJVDp3qYkx5j"
+              "example": "rec_zdVPy1JVGPgv"
             }
           }
         ],
@@ -4679,7 +4679,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "sfr_0MW8YmJLm8n1"
+              "example": "sfr_5ZV8vKX4aPLM"
             }
           },
           {
@@ -4687,7 +4687,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "sfr_lXMk9lqqPd0Y"
+              "example": "sfr_jXmDL777kgGZ"
             }
           },
           {
@@ -4699,7 +4699,7 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "example": "num_lXMk9maOkd0Y"
+              "example": "num_gwZP42z1Dn6o"
             }
           }
         ],
@@ -4766,7 +4766,7 @@
                   "number_id": {
                     "type": "string",
                     "description": "Specify an ID of a number on the account to let the rule apply only to that number.",
-                    "example": "num_zdVPyqNGPgvx"
+                    "example": "num_wQX8MNJjPVd9"
                   }
                 },
                 "discriminator": {
@@ -4867,7 +4867,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "sfr_rodkRV5ak2GW"
+              "example": "sfr_gGzkanydDKO3"
             }
           }
         ],
@@ -4948,7 +4948,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "sfr_6Jl8159n8rbV"
+              "example": "sfr_pWNkZbK3k7Bq"
             }
           }
         ],
@@ -5015,7 +5015,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "sfr_Wb2DzZQgD3j7"
+              "example": "sfr_bG58Ke5GkYlz"
             }
           }
         ],
@@ -5028,7 +5028,7 @@
                   "number_id": {
                     "type": "string",
                     "description": "Specify an ID of a number on the account to let the rule apply only to that number.",
-                    "example": "num_AV98V796PlYd"
+                    "example": "num_oaVDNdnAPRGp"
                   }
                 },
                 "discriminator": {
@@ -5139,7 +5139,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "tag_Y6G82GJ1PwNp"
+              "example": "tag_pWNkZlA387Bq"
             }
           },
           {
@@ -5147,7 +5147,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "tag_5pOkG2gNPzoK"
+              "example": "tag_JVBDQ21K8mOw"
             }
           },
           {
@@ -5299,7 +5299,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "tag_dy9D7GgADzvJ"
+              "example": "tag_Wb2DzvyoD3j7"
             }
           }
         ],
@@ -5385,7 +5385,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "tev_lXMk97npa8d0"
+              "example": "tev_AzlD0VVeKPnb"
             }
           },
           {
@@ -5393,7 +5393,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "tev_0AQDEYXbDGqB"
+              "example": "tev_zo4PAJGgk97E"
             }
           },
           {
@@ -5656,7 +5656,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_Qypkdzxz8nYV"
+              "example": "usr_wQX8M2rBPVd9"
             }
           }
         ],
@@ -5733,7 +5733,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "usg_gwZP4Oox8n6o"
+              "example": "usg_zdVPyvzLkgvx"
             }
           },
           {
@@ -5741,7 +5741,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "usg_Y6G82VMj58wN"
+              "example": "usg_6Jl8101nDrbV"
             }
           }
         ],
@@ -5808,7 +5808,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usg_0AQDEBpYz8Gq"
+              "example": "usg_wOWDedyRk15a"
             }
           }
         ],
@@ -5867,7 +5867,7 @@
           "Users"
         ],
         "summary": "Query User Availability",
-        "description": "Retrieves a snapshot of the queried users' current status on the Telzio platform.\r\nYou can query up to 50 usernames in one request, by including the `u` query parameter multiple times in your request.\r\nAfter the initial query, realtime updates are provided via websockets.",
+        "description": "Retrieves a snapshot of the queried users' current status on the Telzio platform.\nYou can query up to 50 usernames in one request, by including the `u` query parameter multiple times in your request.\nAfter the initial query, realtime updates are provided via websockets.",
         "parameters": [
           {
             "name": "u",
@@ -5946,7 +5946,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_vaKDx1jwy8B4"
+              "example": "usr_Ry18lvw6kG5V"
             }
           },
           {
@@ -6021,7 +6021,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_lXMk97noA8d0"
+              "example": "usr_vaKDxLbLDB4G"
             }
           }
         ],
@@ -6132,7 +6132,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_pWNkZxzKg87B"
+              "example": "usr_MGVkgvabPwNn"
             }
           }
         ],
@@ -6191,7 +6191,7 @@
           "Users"
         ],
         "summary": "Update a Voicemail Greeting",
-        "description": "Updates the personal voicemail greeting for a user.\r\nOnly the user self, or someone with user_admin permissions can edit a user's personal voicemail greeting.",
+        "description": "Updates the personal voicemail greeting for a user.\nOnly the user self, or someone with user_admin permissions can edit a user's personal voicemail greeting.",
         "parameters": [
           {
             "name": "user_id",
@@ -6199,7 +6199,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_0MW8YmJ4Y8n1"
+              "example": "usr_Y6G82VV7o8wN"
             }
           }
         ],
@@ -6322,7 +6322,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "usr_eqVDwWzxDbXv"
+              "example": "usr_pWNkZ9LXP7Bq"
             }
           },
           {
@@ -6531,7 +6531,7 @@
             "description": "The unique ID of the voice used to generate the preview.",
             "schema": {
               "type": "string",
-              "example": "tts_AV98V1VRDlYd"
+              "example": "tts_JVBDQr4p8mOw"
             }
           },
           {
@@ -6619,7 +6619,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "vm_0AQDEBBm08Gq"
+              "example": "vm_gGzkabd7DKO3"
             }
           },
           {
@@ -6627,7 +6627,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "vm_jxEPmNwvk9WJ"
+              "example": "vm_RJVDpp4ADx5j"
             }
           },
           {
@@ -6649,7 +6649,7 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "example": "tag_rodkRLRy82GW"
+              "example": "tag_yZG8nAElD239"
             }
           }
         ],
@@ -6716,7 +6716,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "vm_JEbPBKerkYrV"
+              "example": "vm_wOWDe9XwD15a"
             }
           }
         ],
@@ -6780,7 +6780,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "vm_pQq8baOlDMxN"
+              "example": "vm_Aq1kXmxnxDrJ"
             }
           }
         ],
@@ -6800,18 +6800,18 @@
                     },
                     "description": "Change the tags assigned to the voicemail.",
                     "example": [
-                      "tag_AzlD0vR9PnbV"
+                      "tag_wQX8MzOy7PVd"
                     ]
                   },
                   "assigned_user": {
                     "type": "string",
                     "description": "Reassign the voicemail to another user. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usr_gwZP4R9jDn6o"
+                    "example": "usr_MxJD3NG7kNro"
                   },
                   "assigned_user_group": {
                     "type": "string",
                     "description": "Reassign the voicemail to a group of users. Only `assigned_user` or `assigned_user_group` can be sat, but not both at the same time.",
-                    "example": "usg_JEbPBEXd8YrV"
+                    "example": "usg_eqVDwlQ58bXv"
                   }
                 }
               },
@@ -6893,7 +6893,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "vm_wQX8M5jV8Vd9"
+              "example": "vm_Y6G82noo8wNp"
             }
           }
         ],
@@ -6960,7 +6960,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "vm_6Jl81X61DrbV"
+              "example": "vm_gwZP4royDn6o"
             }
           }
         ],
@@ -7028,7 +7028,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "vm_jxEPm04o89WJ"
+              "example": "vm_rodkRW5yD2GW"
             }
           }
         ],
@@ -7127,7 +7127,7 @@
           "account_id": {
             "type": "string",
             "description": "The unique ID of the Telzio Account.",
-            "example": "acc_jxEPmBgGk9WJ"
+            "example": "acc_Wb2DzWpg83j7"
           },
           "company_name": {
             "minLength": 1,
@@ -7243,7 +7243,7 @@
           "assignment_id": {
             "type": "string",
             "nullable": true,
-            "example": "asg_yZG8n9z3D239"
+            "example": "asg_wOWDeX2qRk15"
           },
           "created": {
             "type": "string",
@@ -7377,7 +7377,7 @@
           "mfa_code": {
             "maxLength": 6,
             "type": "string",
-            "description": "The MFA code for the user's login session. Required if multi-factor authentication is enabled on the user's account.\r\nIf MFA is enabled and this property is not included in the request, the API will reject the login and ask for an MFA code.",
+            "description": "The MFA code for the user's login session. Required if multi-factor authentication is enabled on the user's account.\nIf MFA is enabled and this property is not included in the request, the API will reject the login and ask for an MFA code.",
             "nullable": true,
             "example": "123456"
           }
@@ -7459,7 +7459,7 @@
               },
               "release_sipis": {
                 "type": "boolean",
-                "description": "When set to true, any SIPIS registration for the user is released.\r\nThis is a temporary fix during migration from SIPIS-based app, to avoid Telzio 5.x.x from crashing when receiving push notifications intended for a SIPIS-based app."
+                "description": "When set to true, any SIPIS registration for the user is released.\nThis is a temporary fix during migration from SIPIS-based app, to avoid Telzio 5.x.x from crashing when receiving push notifications intended for a SIPIS-based app."
               }
             },
             "additionalProperties": false
@@ -7660,19 +7660,19 @@
             "type": "string",
             "description": "The unique ID of a voicemail associated with this call.",
             "nullable": true,
-            "example": "vm_0MW8Ye1Y8n15"
+            "example": "vm_alpDr10Gk6Gb"
           },
           "recording_id": {
             "type": "string",
             "description": "The unique ID of a call recording associated with this call.",
             "nullable": true,
-            "example": "rec_bG58Kdd5pPYl"
+            "example": "rec_Wb2Dz0pZP3j7"
           },
           "fax_id": {
             "type": "string",
             "description": "The unique ID of a fax associated with this call.",
             "nullable": true,
-            "example": "fax_vaKDxNO9PB4G"
+            "example": "fax_EWdkWnLYPMw6"
           },
           "tags": {
             "type": "array",
@@ -7897,7 +7897,7 @@
           "call_flow_id": {
             "type": "string",
             "description": "The unique ID of the call flow.",
-            "example": "flo_5ZV8vN0V8LMJ"
+            "example": "flo_gwZP4BqQjDn6"
           },
           "name": {
             "minLength": 1,
@@ -8146,7 +8146,7 @@
           "app_version": {
             "minLength": 1,
             "type": "string",
-            "description": "The version of the app making request.\r\nFormat: major.minor.build, and major MUST be 5, and the minor and build version must not start with a zero.",
+            "description": "The version of the app making request.\nFormat: major.minor.build, and major MUST be 5, and the minor and build version must not start with a zero.",
             "example": "5.1.428"
           },
           "app_build_number": {
@@ -8165,7 +8165,7 @@
             "maxLength": 128,
             "minLength": 1,
             "type": "string",
-            "description": "The unique ID of the hardware running the app.\r\nFor iOS this is the IDFV (https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor).\r\nFor Android this is the ANDROID_ID (https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID)"
+            "description": "The unique ID of the hardware running the app.\nFor iOS this is the IDFV (https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor).\nFor Android this is the ANDROID_ID (https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID)"
           },
           "device_locale": {
             "minLength": 1,
@@ -8295,7 +8295,7 @@
           "comment_id": {
             "type": "string",
             "description": "The unique ID of the comment.",
-            "example": "com_MGVkgyeQ8wNn"
+            "example": "com_AV98VqYzDlYd"
           },
           "text": {
             "minLength": 1,
@@ -8381,7 +8381,7 @@
         "properties": {
           "conversation_id": {
             "type": "string",
-            "example": "cnv_dy9D74wm8zvJ"
+            "example": "cnv_vaKDxEKj8B4G"
           },
           "status": {
             "$ref": "#/components/schemas/ConversationStatus"
@@ -8453,11 +8453,11 @@
           },
           "oldest_message_id": {
             "type": "string",
-            "example": "msg_4mpDqj6r8RaQ"
+            "example": "msg_zo4PA0Gg897E"
           },
           "latest_message_id": {
             "type": "string",
-            "example": "msg_JVBDQjKx8mOw"
+            "example": "msg_Ry18lYx9PG5V"
           },
           "assignments": {
             "type": "array",
@@ -8482,7 +8482,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "A conversation is a chronologically ordered thread of items that all share the same context, for example `call`, `sms`, `voicemail`, `recording`, etc.\r\nCurrently, a conversation can only contain `Sms` items, but this schema is designed for the next generation of Telzio's dashboard and apps, which will be focused around an omnichannel conversation concept.\r\nA conversation is always assigned to either a specific `user` or a `user_group`."
+        "description": "A conversation is a chronologically ordered thread of items that all share the same context, for example `call`, `sms`, `voicemail`, `recording`, etc.\nCurrently, a conversation can only contain `Sms` items, but this schema is designed for the next generation of Telzio's dashboard and apps, which will be focused around an omnichannel conversation concept.\nA conversation is always assigned to either a specific `user` or a `user_group`."
       },
       "ConversationAccessRequest": {
         "allOf": [
@@ -8603,7 +8603,7 @@
           },
           "oldest_message_id": {
             "type": "string",
-            "example": "msg_Y6G822Ev8wNp"
+            "example": "msg_jXmDLLvzDgGZ"
           }
         },
         "additionalProperties": false
@@ -8763,7 +8763,7 @@
           "fax_id": {
             "type": "string",
             "description": "The unique ID of the fax.",
-            "example": "fax_AV98VZ2z8lYd"
+            "example": "fax_5pOkGqxWl8zo"
           },
           "call_id": {
             "minLength": 1,
@@ -8861,7 +8861,7 @@
           "fax_id": {
             "type": "string",
             "description": "The unique ID of the fax.",
-            "example": "fax_zo4PAlawX897"
+            "example": "fax_Y6G82VeX58wN"
           },
           "call_id": {
             "minLength": 1,
@@ -9078,7 +9078,7 @@
           "hold_music_id": {
             "type": "string",
             "description": "The unique ID for the song.",
-            "example": "moh_MGVkgwnqwkwN"
+            "example": "moh_6Jl81pbAlDrb"
           },
           "title": {
             "type": "string",
@@ -9140,7 +9140,7 @@
         "properties": {
           "chat_message_id": {
             "type": "string",
-            "example": "msg_EWdkWxpXDMw6"
+            "example": "msg_pQq8b9mNDMxN"
           },
           "created": {
             "type": "string",
@@ -9263,7 +9263,7 @@
             "items": {
               "$ref": "#/components/schemas/LogEntry"
             },
-            "description": "A list of entries to submit to the log.\r\nYou can submit up to 100 entries per request by specifying them in a collection this way;\r\nentries[0][created]\r\nentries[0][message]\r\nentries[0][severity]\r\nentries[1][created]\r\nentries[2][message]\r\nentries[3][severity]\r\netc..."
+            "description": "A list of entries to submit to the log.\nYou can submit up to 100 entries per request by specifying them in a collection this way;\nentries[0][created]\nentries[0][message]\nentries[0][severity]\nentries[1][created]\nentries[2][message]\nentries[3][severity]\netc..."
           }
         },
         "additionalProperties": false,
@@ -9360,7 +9360,7 @@
             "type": "string",
             "description": "For entries related to voicemails",
             "nullable": true,
-            "example": "vm_pQq8b55eBDMx"
+            "example": "vm_y2MkJ94nPBoW"
           },
           "recording_id": {
             "type": "string",
@@ -9423,7 +9423,7 @@
           "number_id": {
             "type": "string",
             "description": "The unique ID for this number.",
-            "example": "num_pWw8OJ53vDV1"
+            "example": "num_Ry18l9yNPG5V"
           },
           "number_type": {
             "$ref": "#/components/schemas/NumberType"
@@ -9786,7 +9786,7 @@
             "minLength": 1,
             "type": "string",
             "description": "A unique ID representing the device. This will remain the same when when logging out of the app and signing back in with a different username.",
-            "example": "dv_gwZP4pVLPn6o"
+            "example": "dv_MGVkgyOQ8wNn"
           },
           "claims_token": {
             "type": "string",
@@ -9839,7 +9839,7 @@
             "items": {
               "$ref": "#/components/schemas/LegalPolicy"
             },
-            "description": "Contains a list of policies the user must consent to.\r\nSome policies may not be in effect yet, but should still be presented to the user upon login. This is defined by the policy's _\"effective date\"_.",
+            "description": "Contains a list of policies the user must consent to.\nSome policies may not be in effect yet, but should still be presented to the user upon login. This is defined by the policy's _\"effective date\"_.",
             "nullable": true
           },
           "resource_configurations": {
@@ -9867,7 +9867,7 @@
           },
           "conversation_id": {
             "type": "string",
-            "example": "cnv_pWw8OMnvkV12"
+            "example": "cnv_oaVDN2jODRGp"
           },
           "current_owner": {
             "oneOf": [
@@ -9902,7 +9902,7 @@
           "queue_id": {
             "type": "string",
             "description": "The unique ID of the queue.",
-            "example": "que_gwZP4dJLPn6o"
+            "example": "que_B5Kk57Xe8zNe"
           },
           "name": {
             "minLength": 1,
@@ -10063,7 +10063,7 @@
               }
             },
             "additionalProperties": false,
-            "description": "A list of int showing how many seconds the call had a certain status.\r\nThis can for example be used to show hold time and current talk time.",
+            "description": "A list of int showing how many seconds the call had a certain status.\nThis can for example be used to show hold time and current talk time.",
             "nullable": true
           },
           "connected_agent": {
@@ -10126,7 +10126,7 @@
           },
           "agents_gracing": {
             "type": "integer",
-            "description": "The number of online agents who are now in gracing-mode because they recently have been talking.\r\nGracing mode allows agents some time to wrap up their previous call before taking a new one.",
+            "description": "The number of online agents who are now in gracing-mode because they recently have been talking.\nGracing mode allows agents some time to wrap up their previous call before taking a new one.",
             "format": "int32"
           },
           "agents_offline": {
@@ -10211,7 +10211,7 @@
           "number_id": {
             "type": "string",
             "description": "The telzio number_id that for inbound calls was called, or for outbound calls was called from.",
-            "example": "num_4mpDqvxE8RaQ"
+            "example": "num_wOWDeAxwD15a"
           },
           "date": {
             "type": "string",
@@ -10265,7 +10265,7 @@
           "recording_id": {
             "type": "string",
             "description": "The unique ID of the recording.",
-            "example": "rec_dy9D7Wg7wDzv"
+            "example": "rec_B5Kk5jj7eDzN"
           },
           "call_id": {
             "minLength": 1,
@@ -10470,11 +10470,11 @@
         "properties": {
           "conversation_id": {
             "type": "string",
-            "example": "cnv_zo4PA2mbk97E"
+            "example": "cnv_pQq8bp07kMxN"
           },
           "sms_id": {
             "type": "string",
-            "example": "msg_gwZP4zbADn6o"
+            "example": "msg_JEbPBABK8YrV"
           },
           "text": {
             "type": "string",
@@ -10556,11 +10556,11 @@
           "sms_media_id": {
             "type": "string",
             "description": "The unique ID associated with this SMS media.",
-            "example": "mms_eqVDwjA0akbX"
+            "example": "mms_5pOkGO3ykzoK"
           },
           "sms_id": {
             "type": "string",
-            "example": "msg_6Jl81dnNDrbV"
+            "example": "msg_wOWDeJl6815a"
           },
           "status": {
             "$ref": "#/components/schemas/SMSMediaStatus"
@@ -10791,7 +10791,7 @@
           "spam_filter_rule_id": {
             "type": "string",
             "description": "The unique ID for the spam filter rule.",
-            "example": "sfr_zdVPydl48gvx"
+            "example": "sfr_gwZP4eV1kn6o"
           },
           "threshold": {
             "maximum": 100,
@@ -10830,7 +10830,7 @@
             "type": "string",
             "description": "Specify an ID of a number on the account to let the rule apply only to that number.",
             "nullable": true,
-            "example": "num_zo4PA6Agk97E"
+            "example": "num_bG58K131kYlz"
           }
         },
         "additionalProperties": false,
@@ -10888,7 +10888,7 @@
           "tag_id": {
             "type": "string",
             "description": "The unique ID for the tag.",
-            "example": "tag_jxEPmOJeD9WJ"
+            "example": "tag_5ZV8v96mDLMJ"
           },
           "name": {
             "minLength": 1,
@@ -10997,7 +10997,7 @@
           "voice_id": {
             "type": "string",
             "description": "The unique ID of the voice used to generate the greeting.",
-            "example": "tts_gGzkaXV4RPKO"
+            "example": "tts_QypkdZBg8nYV"
           },
           "text": {
             "minLength": 1,
@@ -11064,7 +11064,7 @@
           "timeline_event_id": {
             "type": "string",
             "description": "The ID of the timeline the event is associated with.",
-            "example": "tev_alpDrvZqD6Gb"
+            "example": "tev_Q3KkjdYv8eqd"
           }
         },
         "additionalProperties": false,
@@ -11322,7 +11322,7 @@
           "user_id": {
             "type": "string",
             "description": "The unique ID representing the user.",
-            "example": "usr_alpDr9NWk6Gb"
+            "example": "usr_yZG8njbz8239"
           },
           "status": {
             "$ref": "#/components/schemas/UserStatus"
@@ -11574,7 +11574,7 @@
                 "maxLength": 128,
                 "minLength": 1,
                 "type": "string",
-                "description": "The user's timezone. Defaults to account's default time zone.\r\nSee /utilities/time_zones for a list of available time zones.",
+                "description": "The user's timezone. Defaults to account's default time zone.\nSee /utilities/time_zones for a list of available time zones.",
                 "nullable": true,
                 "example": "America/New_York"
               },
@@ -11611,7 +11611,7 @@
           "user_group_id": {
             "type": "string",
             "description": "The unique ID representing this user group.",
-            "example": "usg_yZG8nxj0Gk23"
+            "example": "usg_wOWDex3zk15a"
           },
           "group_name": {
             "minLength": 1,
@@ -11808,7 +11808,7 @@
           "voice_id": {
             "type": "string",
             "description": "The unique ID of the voice.",
-            "example": "tts_6Jl81p92eDrb"
+            "example": "tts_oaVDNwxOM8RG"
           },
           "display_name": {
             "type": "string",
@@ -11859,7 +11859,7 @@
           "voicemail_id": {
             "type": "string",
             "description": "The unique ID of the voicemail.",
-            "example": "vm_Y6G82VrBd8wN"
+            "example": "vm_AzlD0pXyDnbV"
           },
           "call_id": {
             "minLength": 1,
