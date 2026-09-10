@@ -5,3 +5,5 @@
 A package for interacting with [Telzio](https://telzio.com/)'s API.
 
 See its [documentation](api.telzio.com/v3/index.html) for details.
+
+<https://www.npmjs.com/package/telzio-ts>
